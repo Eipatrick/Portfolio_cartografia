@@ -32,11 +32,13 @@ if (footer && buttons) {
         window.inactivityTimer = setTimeout(hideElements, INACTIVITY_TIME);
     }
 
-    // Eventos que reiniciam o temporizador ao detectar atividade do usuário
+    // Eventos para detectar interação do usuário (incluindo toque para celular)
     window.addEventListener("mousemove", resetTimer);
     window.addEventListener("mousedown", resetTimer);
     window.addEventListener("keypress", resetTimer);
     window.addEventListener("scroll", resetTimer);
+    window.addEventListener("touchstart", resetTimer); // Para detectar toque na tela
+    window.addEventListener("touchmove", resetTimer); // Para detectar deslizar na tela
 
     // Inicia o temporizador ao carregar a página
     resetTimer();
