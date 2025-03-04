@@ -102,3 +102,83 @@ body {
 .article a:hover {
     text-decoration: underline;
 }
+
+.osm-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #0078a8; /* Cor do OpenStreetMap */
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.osm-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+.osm-link:hover {
+    background-color: #005f82; /* Azul escuro no hover */
+}
+
+.osm-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #0078a8;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.osm-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+.osm-link:hover {
+    background-color: #005f82;
+}
+
+.linkedin-link {
+    position: fixed;
+    top: 80px; /* Distância abaixo do botão OpenStreetMap */
+    right: 20px;
+    background-color: #0077b5;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.linkedin-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.linkedin-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.linkedin-link:hover {
+    background-color: #005f8a;
+}
+

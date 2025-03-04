@@ -17,8 +17,8 @@ Este projeto está licenciado sob a **GNU GENERAL PUBLIC LICENSE Version 3, 29 J
 
 ## 🙌 Créditos
 
-- **Desenvolvido por**: [Patrick Rodrigues](mailto:paulopatrick@proton.me).
-- **Assistência de IA**: Este site foi criado com a assistência da IA [DeepSeek](https://www.deepseek.com/).
+- **Desenvolvido por**: [Paulo Patrick Rodrigues da Silva](mailto:paulopatrick@proton.me).
+- **Assistência de IA**: Este site foi criado com a assistência da IA [DeepSeek](https://www.deepseek.com/) e [ChatGPT](https://chatgpt.com/)
 
 ## 📬 Contato
 
