@@ -28,20 +28,30 @@ if (footer && buttons) {
         showElements(); // Mostra os elementos ao interagir
 
         // Limpa o temporizador anterior
-        clearTimeout(window.inactivityTimer);
+        if (window.inactivityTimer) {
+            clearTimeout(window.inactivityTimer);
+        }
 
         // Inicia um novo temporizador para ocultar os elementos
         window.inactivityTimer = setTimeout(hideElements, INACTIVITY_TIME);
     }
 
     // Eventos para detectar interação do usuário (incluindo toques para celular)
-    window.addEventListener("mousemove", resetTimer);
-    window.addEventListener("mousedown", resetTimer);
-    window.addEventListener("keypress", resetTimer);
-    window.addEventListener("scroll", resetTimer);
-    window.addEventListener("touchstart", resetTimer); // Para detectar toques na tela
-    window.addEventListener("touchmove", resetTimer); // Para detectar deslizar na tela
-    window.addEventListener("touchend", resetTimer); // Para detectar o fim do toque
+    const events = [
+        "mousemove",   // Movimento do mouse (desktop)
+        "mousedown",   // Clique do mouse (desktop)
+        "keypress",    // Teclas pressionadas (desktop)
+        "scroll",      // Rolagem da página (desktop e mobile)
+        "touchstart",  // Toque na tela (mobile)
+        "touchmove",   // Deslizar na tela (mobile)
+        "touchend",    // Fim do toque (mobile)
+        "click",       // Clique (desktop e mobile)
+    ];
+
+    // Adiciona os eventos de interação
+    events.forEach(event => {
+        window.addEventListener(event, resetTimer);
+    });
 
     // Inicia o temporizador ao carregar a página
     resetTimer();
