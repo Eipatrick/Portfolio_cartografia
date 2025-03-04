@@ -58,3 +58,5 @@ if (footer && buttons) {
 } else {
     console.error("Elementos #footer ou #buttons não encontrados no DOM.");
 }
+
+window.addEventListener(event, resetTimer, { passive: false });
