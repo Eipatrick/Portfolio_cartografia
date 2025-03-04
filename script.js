@@ -1,5 +1,5 @@
-// Tempo de inatividade em milissegundos (3 segundos)
-const INACTIVITY_TIME = 3000;
+// Tempo de inatividade em milissegundos (5 segundos)
+const INACTIVITY_TIME = 5000;
 
 // Seleciona os elementos que serão ocultados
 const footer = document.getElementById("footer");
