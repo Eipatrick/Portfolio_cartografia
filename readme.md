@@ -13,7 +13,7 @@ O site foi criado com **HTML**, **CSS** e um toque de **JavaScript** (se necess�
 
 ## 📝 Licença
 
-Este projeto está licenciado sob a **Licença MIT**. Sinta-se à vontade para usar, modificar e distribuir o código conforme necessário. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a **GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007**. Sinta-se à vontade para usar, modificar e distribuir o código conforme necessário. Veja o arquivo [LICENSE](license.md) para mais detalhes.
 
 ## 🙌 Créditos
 
