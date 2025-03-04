@@ -182,3 +182,9 @@ body {
     background-color: #005f8a;
 }
 
+/* Classe para ocultar elementos */
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Transição suave */
+    pointer-events: none; /* Impede interação com elementos ocultos */
+}

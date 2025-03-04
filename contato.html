@@ -5,17 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Portfólio Cartográfico</title>
     <link rel="stylesheet" href="style.css">
-
-    <div class="osm-link">
-        <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank">Meu OpenStreetMap</a>
-    </div>
-
-    <div class="linkedin-link">
-        <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank">
-            Conecte-se comigo no LinkedIn
-        </a>
-    </div>
-
 </head>
 <body>
 
@@ -24,6 +13,19 @@
         <h1>Portfólio Cartográfico</h1>
         <p>Bem-vindo ao meu portfólio de projetos de mapeamento e geoprocessamento!</p>
         <p>Paulo Patrick Rodrigues da Silva</p>
+
+        <!-- Links flutuantes -->
+        <div id="buttons">
+            <div class="osm-link">
+                <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank">Meu OpenStreetMap</a>
+            </div>
+
+            <div class="linkedin-link">
+                <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank">
+                    Conecte-se comigo no LinkedIn
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- Menu de Navegação -->
@@ -39,12 +41,12 @@
         <!-- Seção Contato -->
         <section id="contato">
             <h2>Contato</h2>
-            <p>Se você quiser entrar em contato para colaborações ou mais informações, envie um e-mail para: <a href="mailto:seuemail@example.com">paulopatrick@proton.me</a>.</p>
+            <p>Se você quiser entrar em contato para colaborações ou mais informações, envie um e-mail para: <a href="mailto:paulopatrick@proton.me">paulopatrick@proton.me</a>.</p>
         </section>
     </div>
 
     <!-- Rodapé -->
-    <footer>
+    <footer id="footer">
         <p>&copy; Paulo Patrick Rodrigues da Silva, 2025.</p>
         <p>Este portfólio é de código aberto sob a <a href="license.md" target="_blank">licença GNU GPL v3</a>. Você pode usar e modificar, desde que mantenha esta licença.</p>
 
@@ -52,6 +54,9 @@
             <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
         </div>
     </footer>
+
+    <!-- Vinculação ao script.js -->
+    <script src="script.js"></script>
 
 </body>
 </html>
