@@ -184,7 +184,7 @@ body {
 
 /* Classe para ocultar elementos */
 .hidden {
-    opacity: 0;
+    opacity: 0.5;
     transition: opacity 0.5s ease-in-out; /* Transição suave */
     pointer-events: none; /* Impede interação com elementos ocultos */
 }

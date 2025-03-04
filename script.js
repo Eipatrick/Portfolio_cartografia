@@ -9,14 +9,18 @@ const buttons = document.getElementById("buttons");
 if (footer && buttons) {
     // Função para ocultar os elementos
     function hideElements() {
-        footer.style.display = "none";  // Esconde completamente
-        buttons.style.display = "none";
+        footer.style.opacity = "0";  // Torna o rodapé transparente
+        footer.style.visibility = "hidden"; // Oculta o rodapé
+        buttons.style.opacity = "0"; // Torna os botões transparentes
+        buttons.style.visibility = "hidden"; // Oculta os botões
     }
 
     // Função para mostrar os elementos
     function showElements() {
-        footer.style.display = "block"; // Mostra novamente
-        buttons.style.display = "block";
+        footer.style.opacity = "1";  // Torna o rodapé visível
+        footer.style.visibility = "visible"; // Mostra o rodapé
+        buttons.style.opacity = "1"; // Torna os botões visíveis
+        buttons.style.visibility = "visible"; // Mostra os botões
     }
 
     // Função para reiniciar o temporizador de inatividade
@@ -37,6 +41,7 @@ if (footer && buttons) {
     window.addEventListener("scroll", resetTimer);
     window.addEventListener("touchstart", resetTimer); // Para detectar toques na tela
     window.addEventListener("touchmove", resetTimer); // Para detectar deslizar na tela
+    window.addEventListener("touchend", resetTimer); // Para detectar o fim do toque
 
     // Inicia o temporizador ao carregar a página
     resetTimer();
