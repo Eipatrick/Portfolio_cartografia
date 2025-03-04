@@ -188,3 +188,7 @@ body {
     transition: opacity 0.5s ease-in-out; /* Transição suave */
     pointer-events: none; /* Impede interação com elementos ocultos */
 }
+
+#buttons {
+    margin-top: 10px; /* Ajuste o valor conforme necessário */
+}
