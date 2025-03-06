@@ -1,39 +1,34 @@
 // Tempo de inatividade em milissegundos (5 segundos)
-const INACTIVITY_TIME = 5000;
+const INACTIVITY_TIME = 3000;
 
-// Seleciona os elementos que serão ocultados
+// Seleciona o elemento do rodapé
 const footer = document.getElementById("footer");
-const buttons = document.getElementById("buttons");
 
-// Verifica se os elementos existem antes de aplicar ações
-if (footer && buttons) {
-    // Função para ocultar os elementos
-    function hideElements() {
+// Verifica se o rodapé existe antes de aplicar ações
+if (footer) {
+    // Função para ocultar o rodapé
+    function hideFooter() {
         footer.style.opacity = "0";  // Torna o rodapé transparente
         footer.style.visibility = "hidden"; // Oculta o rodapé
-        buttons.style.opacity = "0"; // Torna os botões transparentes
-        buttons.style.visibility = "hidden"; // Oculta os botões
     }
 
-    // Função para mostrar os elementos
-    function showElements() {
+    // Função para mostrar o rodapé
+    function showFooter() {
         footer.style.opacity = "1";  // Torna o rodapé visível
         footer.style.visibility = "visible"; // Mostra o rodapé
-        buttons.style.opacity = "1"; // Torna os botões visíveis
-        buttons.style.visibility = "visible"; // Mostra os botões
     }
 
     // Função para reiniciar o temporizador de inatividade
     function resetTimer() {
-        showElements(); // Mostra os elementos ao interagir
+        showFooter(); // Mostra o rodapé ao interagir
 
         // Limpa o temporizador anterior
         if (window.inactivityTimer) {
             clearTimeout(window.inactivityTimer);
         }
 
-        // Inicia um novo temporizador para ocultar os elementos
-        window.inactivityTimer = setTimeout(hideElements, INACTIVITY_TIME);
+        // Inicia um novo temporizador para ocultar o rodapé
+        window.inactivityTimer = setTimeout(hideFooter, INACTIVITY_TIME);
     }
 
     // Eventos para detectar interação do usuário (incluindo toques para celular)
@@ -56,20 +51,19 @@ if (footer && buttons) {
     // Inicia o temporizador ao carregar a página
     resetTimer();
 } else {
-    console.error("Elementos #footer ou #buttons não encontrados no DOM.");
+    console.error("Elemento #footer não encontrado no DOM.");
 }
 
-window.addEventListener(event, resetTimer, { passive: false });
 
-    // Inicializa o mapa e define o centro e o nível de zoom
-    var map = L.map('map').setView([-23.5505, -46.6333], 13); // São Paulo como exemplo
+// Inicializa o mapa e define o centro e o nível de zoom
+var map = L.map('map').setView([-23.5505, -46.6333], 13); // São Paulo como exemplo
 
-    // Adiciona o tile layer do OpenStreetMap ao mapa
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+ // Adiciona o tile layer do OpenStreetMap ao mapa
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-    // Adiciona um marcador ao mapa
-    L.marker([-23.5505, -46.6333]).addTo(map)
-        .bindPopup('São Paulo, Brasil')
-        .openPopup();
+ // Adiciona um marcador ao mapa
+L.marker([-23.5505, -46.6333]).addTo(map)
+    .bindPopup('São Paulo, Brasil')
+    .openPopup();
