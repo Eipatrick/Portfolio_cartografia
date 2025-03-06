@@ -60,3 +60,16 @@ if (footer && buttons) {
 }
 
 window.addEventListener(event, resetTimer, { passive: false });
+
+    // Inicializa o mapa e define o centro e o nível de zoom
+    var map = L.map('map').setView([-23.5505, -46.6333], 13); // São Paulo como exemplo
+
+    // Adiciona o tile layer do OpenStreetMap ao mapa
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+    // Adiciona um marcador ao mapa
+    L.marker([-23.5505, -46.6333]).addTo(map)
+        .bindPopup('São Paulo, Brasil')
+        .openPopup();

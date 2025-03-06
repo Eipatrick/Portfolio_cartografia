@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Portfólio Cartográfico</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+            max-width: 800px; /* Limita a largura máxima do mapa */
+            margin: 20px auto; /* Centraliza o mapa na tela */
+            border: 2px solid #000; /* Adiciona uma borda ao mapa */
+        }
+    </style>
+    <!-- Adicione a biblioteca do Leaflet para o OpenStreetMap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
 
@@ -43,6 +54,9 @@
             <h2>Sobre Mim</h2>
             <p>Olá, meu nome é Paulo Patrick e sou estudante de geografia, também formado em engenharia civil. Busco contribuir com a sociedade fora do escopo capitalista através de análises geoespaciais, sociais, políticas e demais áreas envolventes do meio ambiente. O intuito deste portfólio é apresentar meus projetos acompanhados de meus posicionamentos filosóficos e políticos, não busco neutralidade, portanto deixo aqui minhas intenções para além da ciência geográfica.</p>
         </section>
+
+        <!-- Mapa do OpenStreetMap -->
+        <div id="map"></div>
     </div>
 
     <!-- Rodapé -->
@@ -58,5 +72,21 @@
     <!-- Vinculação ao script.js -->
     <script src="script.js"></script>
 
+    <!-- Biblioteca do Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Inicializa o mapa e define o centro e o nível de zoom
+        var map = L.map('map').setView([-23.5505, -46.6333], 13); // São Paulo como exemplo
+
+        // Adiciona o tile layer do OpenStreetMap ao mapa
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Adiciona um marcador ao mapa
+        L.marker([-23.5505, -46.6333]).addTo(map)
+            .bindPopup('São Paulo, Brasil')
+            .openPopup();
+    </script>
 </body>
 </html>
