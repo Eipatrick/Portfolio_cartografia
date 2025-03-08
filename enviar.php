@@ -21,11 +21,17 @@ try {
         $stmt = $pdo->prepare($sql);
         $stmt->execute(['nome' => $nome, 'email' => $email, 'mensagem' => $mensagem]);
 
-        echo "<p>Mensagem enviada e salva com sucesso!</p>";
+        // Redirecionar de volta ao formulário com uma mensagem de sucesso
+        header("Location: index.html?status=success");
+        exit();
     } else {
-        echo "<p>Método de requisição inválido.</p>";
+        // Redirecionar de volta ao formulário com uma mensagem de erro
+        header("Location: index.html?status=error");
+        exit();
     }
 } catch (PDOException $e) {
-    echo "<p>Erro ao conectar ou salvar no banco de dados: " . $e->getMessage() . "</p>";
+    // Em caso de erro, redirecionar com uma mensagem de erro
+    header("Location: index.html?status=error");
+    exit();
 }
 ?>
