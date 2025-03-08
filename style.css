@@ -76,6 +76,17 @@ footer {
     margin-top: 15px;
 }
 
+/* Estilo do link da licença */
+.license-link {
+    color: #85cc88; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Opcional: deixa o texto em negrito */
+}
+
+.license-link:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
 /* Botões OpenStreetMap e LinkedIn */
 #buttons {
     margin-top: 10px;
