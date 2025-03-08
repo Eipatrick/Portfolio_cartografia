@@ -144,17 +144,6 @@ body {
     }
 }
 
-/* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    position: relative;
-    min-height: 100vh;
-}
-
-
 /* Overlay (fundo escurecido) */
 .overlay {
     position: fixed;
@@ -291,15 +280,21 @@ body {
 
 /* Rodapé */
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    z-index: 999; /* Garante que o rodapé fique abaixo do ícone */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Garante que o rodapé fique acima de outros elementos */
+}
+
+/* Contêiner do mapa */
+.map-container {
+    height: 400px; /* Altura do mapa */
+    width: 100%;
+    margin-bottom: 80px; /* Espaço reservado para o rodapé */
 }
 
 /* Ajustes para dispositivos móveis */
