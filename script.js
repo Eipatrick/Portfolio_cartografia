@@ -1,3 +1,5 @@
+/*
+
 // Tempo de inatividade em milissegundos (5 segundos)
 const INACTIVITY_TIME = 3000;
 
@@ -54,6 +56,8 @@ if (footer) {
     console.error("Elemento #footer não encontrado no DOM.");
 }
 
+*/
+
 // Inicializa o mapa e define o centro e o nível de zoom
 var map = L.map('map').setView([-23.5505, -46.6333], 13); // São Paulo como exemplo
 
@@ -75,3 +79,21 @@ function toggleForm() {
     overlay.classList.toggle("visible");
     formContainer.classList.toggle("visible");
 }
+
+// Garante que o botão não sobreponha o rodapé
+
+document.addEventListener("scroll", function () {
+    const button = document.querySelector(".toggle-form-button");
+    const footer = document.querySelector("footer");
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (footerRect.top < windowHeight) {
+        // O rodapé está visível, então levamos o botão para cima
+        const overlap = windowHeight - footerRect.top;
+        button.style.bottom = `${20 + overlap}px`;
+    } else {
+        // O rodapé não está visível, mantém o botão na posição padrão
+        button.style.bottom = "20px";
+    }
+});

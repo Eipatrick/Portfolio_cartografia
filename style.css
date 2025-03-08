@@ -218,7 +218,7 @@ footer {
 /* Botão para abrir/fechar o formulário */
 .toggle-form-button {
     position: fixed;
-    bottom: 60px; /* Ajuste para garantir que o botão fique acima do rodapé */
+    bottom: 20px; /* Ajuste para garantir que o botão fique acima do rodapé */
     right: 20px;
     background-color: #28a745;
     color: #fff;
