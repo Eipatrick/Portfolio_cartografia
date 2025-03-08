@@ -156,10 +156,6 @@ body {
     display: none;
 }
 
-.overlay.hidden {
-    display: none;
-}
-
 .overlay.visible {
     display: block;
 }
@@ -221,6 +217,30 @@ body {
     background-color: #218838;
 }
 
+/* Botão do Phiz */
+.phiz-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.phiz-button:hover {
+    background-color: #0056b3;
+}
+
+.phiz-button img {
+    margin-right: 10px;
+}
+
 /* Botão para abrir/fechar o formulário */
 .toggle-form-button {
     position: fixed;
@@ -239,6 +259,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: bottom 0.3s ease; /* Animação suave */
+}
+
+.toggle-form-button.up {
+    bottom: calc(100vh - 100px); /* Move o ícone para cima */
 }
 
 .toggle-form-button:hover {
@@ -250,4 +275,18 @@ body {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
+    padding-bottom: 100px; /* Espaço para o rodapé */
+}
+
+/* Rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 999;
 }

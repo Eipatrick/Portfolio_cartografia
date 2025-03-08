@@ -72,7 +72,15 @@ L.marker([-23.5505, -46.6333]).addTo(map)
 function toggleForm() {
     const overlay = document.getElementById("overlay");
     const formContainer = document.getElementById("formContainer");
+    const toggleButton = document.getElementById("toggleButton");
 
     overlay.classList.toggle("visible");
     formContainer.classList.toggle("visible");
+
+    // Move o ícone para cima ou para baixo
+    if (formContainer.classList.contains("visible")) {
+        toggleButton.classList.add("up");
+    } else {
+        toggleButton.classList.remove("up");
+    }
 }
