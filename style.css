@@ -217,34 +217,10 @@ body {
     background-color: #218838;
 }
 
-/* Botão do Phiz */
-.phiz-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.phiz-button:hover {
-    background-color: #0056b3;
-}
-
-.phiz-button img {
-    margin-right: 10px;
-}
-
 /* Botão para abrir/fechar o formulário */
 .toggle-form-button {
     position: fixed;
-    bottom: 20px; /* Posição padrão para desktop */
+    bottom: 120px; /* Ajuste para garantir que o botão fique acima do rodapé */
     right: 20px;
     background-color: #28a745;
     color: #fff;
@@ -283,7 +259,8 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    position: fixed;
+    padding: 5px 0;
     bottom: 0;
     left: 0;
     width: 100%;

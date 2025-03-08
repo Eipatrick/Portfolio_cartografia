@@ -1,3 +1,5 @@
+/*
+
 // Tempo de inatividade em milissegundos (5 segundos)
 const INACTIVITY_TIME = 3000;
 
@@ -54,6 +56,7 @@ if (footer) {
     console.error("Elemento #footer não encontrado no DOM.");
 }
 
+*/
 
 // Inicializa o mapa e define o centro e o nível de zoom
 var map = L.map('map').setView([-23.5505, -46.6333], 13); // São Paulo como exemplo
