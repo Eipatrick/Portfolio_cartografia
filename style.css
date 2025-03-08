@@ -144,6 +144,17 @@ body {
     }
 }
 
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    position: relative;
+    min-height: 100vh;
+}
+
+
 /* Overlay (fundo escurecido) */
 .overlay {
     position: fixed;
@@ -244,7 +255,7 @@ body {
 /* Botão para abrir/fechar o formulário */
 .toggle-form-button {
     position: fixed;
-    bottom: 20px;
+    bottom: 20px; /* Posição padrão para desktop */
     right: 20px;
     background-color: #28a745;
     color: #fff;
@@ -288,5 +299,16 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    z-index: 999;
+    z-index: 999; /* Garante que o rodapé fique abaixo do ícone */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .toggle-form-button {
+        bottom: 70px; /* Posição acima do rodapé no celular */
+    }
+
+    .content {
+        padding-bottom: 150px; /* Mais espaço para o rodapé no celular */
+    }
 }
