@@ -36,14 +36,22 @@
         <a href="contato.html">Contato</a>
     </nav>
 
-    <!-- Conteúdo Principal -->
-    <div class="container">
-        <!-- Seção Contato -->
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Se você quiser entrar em contato para colaborações ou mais informações, envie um e-mail para: <a href="mailto:paulopatrick@proton.me">paulopatrick@proton.me</a>.</p>
-        </section>
-    </div>
+<!-- Botão para abrir/fechar o formulário -->
+<button class="toggle-form-button" onclick="toggleForm()">✉️</button>
+
+<!-- Overlay (fundo escurecido) -->
+<div class="overlay hidden" id="overlay"></div>
+
+<!-- Formulário centralizado -->
+<div class="form-container hidden" id="formContainer">
+    <h2>Fale Comigo</h2>
+    <form action="enviar.php" method="POST">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
 
     <!-- Rodapé -->
     <footer id="footer">

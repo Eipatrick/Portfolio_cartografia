@@ -67,3 +67,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}png', {
 L.marker([-23.5505, -46.6333]).addTo(map)
     .bindPopup('São Paulo, Brasil')
     .openPopup();
+
+// Função para mostrar/esconder o formulário e o overlay
+function toggleForm() {
+    const overlay = document.getElementById("overlay");
+    const formContainer = document.getElementById("formContainer");
+
+    overlay.classList.toggle("visible");
+    formContainer.classList.toggle("visible");
+}

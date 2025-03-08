@@ -36,6 +36,23 @@
         <a href="contato.html">Contato</a>
     </nav>
 
+    <!-- Botão para abrir/fechar o formulário -->
+<button class="toggle-form-button" onclick="toggleForm()">✉️</button>
+
+<!-- Overlay (fundo escurecido) -->
+<div class="overlay hidden" id="overlay"></div>
+
+<!-- Formulário centralizado -->
+<div class="form-container hidden" id="formContainer">
+    <h2>Fale Comigo</h2>
+    <form action="enviar.php" method="POST">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
     <!-- Conteúdo Principal -->
     <div class="container">
         <!-- Seção Artigos -->
