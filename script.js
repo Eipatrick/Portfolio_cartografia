@@ -80,20 +80,45 @@ function toggleForm() {
     formContainer.classList.toggle("visible");
 }
 
-// Garante que o botão não sobreponha o rodapé
+// Função para ajustar a posição do botão
+function ajustarPosicaoBotao() {
+    const botao = document.getElementById("toggleButton");
+    const rodape = document.querySelector("footer");
+    const alturaRodape = rodape.offsetHeight;
 
-document.addEventListener("scroll", function () {
-    const button = document.querySelector(".toggle-form-button");
-    const footer = document.querySelector("footer");
-    const footerRect = footer.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+    // Calcula a posição do botão para que ele fique acima do rodapé
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const alturaJanela = window.innerHeight;
+    const alturaDocumento = document.documentElement.scrollHeight;
 
-    if (footerRect.top < windowHeight) {
-        // O rodapé está visível, então levamos o botão para cima
-        const overlap = windowHeight - footerRect.top;
-        button.style.bottom = `${20 + overlap}px`;
+    // Verifica se o usuário está no final da página
+    if (scrollTop + alturaJanela >= alturaDocumento - alturaRodape) {
+        botao.style.bottom = `${alturaRodape + 20}px`; // 20px de margem
     } else {
-        // O rodapé não está visível, mantém o botão na posição padrão
-        button.style.bottom = "20px";
+        botao.style.bottom = "130px"; // Posição inicial
     }
-});
+}
+
+// Função para mostrar/esconder o formulário e o overlay
+function toggleForm() {
+    const overlay = document.getElementById("overlay");
+    const formContainer = document.getElementById("formContainer");
+    const toggleButton = document.getElementById("toggleButton");
+
+    overlay.classList.toggle("visible");
+    formContainer.classList.toggle("visible");
+
+    // Move o ícone para cima ou para baixo
+    if (formContainer.classList.contains("visible")) {
+        toggleButton.classList.add("up");
+    } else {
+        toggleButton.classList.remove("up");
+    }
+}
+
+// Adiciona o event listener ao botão
+document.getElementById("toggleButton").addEventListener("click", toggleForm);
+
+// Ajusta a posição do botão ao rolar a página
+window.addEventListener("scroll", ajustarPosicaoBotao);
+window.addEventListener("resize", ajustarPosicaoBotao);

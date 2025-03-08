@@ -275,7 +275,7 @@ footer {
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     .toggle-form-button {
-        bottom: 70px; /* Posição acima do rodapé no celular */
+        bottom: 50px; /* Posição acima do rodapé no celular */
     }
 
     .content {
