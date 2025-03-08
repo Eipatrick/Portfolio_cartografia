@@ -16,6 +16,9 @@
     </style>
     <!-- Adicione a biblioteca do Leaflet para o OpenStreetMap -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+        <!-- Vinculação ao script.js -->
+        <script src="script.js"></script>
 </head>
 <body>
 
@@ -47,7 +50,9 @@
     </nav>
 
     <!-- Botão para abrir/fechar o formulário -->
-<button class="toggle-form-button" onclick="toggleForm()">✉️</button>
+    <div class="button-container">
+        <button class="toggle-form-button" id="toggleButton">✉️</button>
+    </div>
 
 <!-- Overlay (fundo escurecido) -->
 <div class="overlay hidden" id="overlay"></div>
@@ -84,9 +89,7 @@
             <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
         </div>
     </footer>
-    
-    <!-- Vinculação ao script.js -->
-    <script src="script.js"></script>
+
 
     <!-- Biblioteca do Leaflet -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>

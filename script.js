@@ -86,16 +86,19 @@ function ajustarPosicaoBotao() {
     const rodape = document.querySelector("footer");
     const alturaRodape = rodape.offsetHeight;
 
-    // Calcula a posição do botão para que ele fique acima do rodapé
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const alturaJanela = window.innerHeight;
-    const alturaDocumento = document.documentElement.scrollHeight;
+    // Verifica se a tela é pequena (dispositivo móvel)
+    if (window.innerWidth <= 768) {
+        // Calcula a posição do botão para que ele fique acima do rodapé
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const alturaJanela = window.innerHeight;
+        const alturaDocumento = document.documentElement.scrollHeight;
 
-    // Verifica se o usuário está no final da página
-    if (scrollTop + alturaJanela >= alturaDocumento - alturaRodape) {
-        botao.style.bottom = `${alturaRodape + 20}px`; // 20px de margem
-    } else {
-        botao.style.bottom = "130px"; // Posição inicial
+        // Verifica se o usuário está no final da página
+        if (scrollTop + alturaJanela >= alturaDocumento - alturaRodape) {
+            botao.style.bottom = `${alturaRodape + 20}px`; // 20px de margem
+        } else {
+            botao.style.bottom = "80px"; // Posição inicial no celular
+        }
     }
 }
 
@@ -122,3 +125,15 @@ document.getElementById("toggleButton").addEventListener("click", toggleForm);
 // Ajusta a posição do botão ao rolar a página
 window.addEventListener("scroll", ajustarPosicaoBotao);
 window.addEventListener("resize", ajustarPosicaoBotao);
+
+// Inicializa o mapa OpenStreetMap
+const map = L.map('map').setView([-15.7942, -47.8822], 13); // Coordenadas de Brasília, por exemplo
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Adiciona um marcador
+L.marker([-15.7942, -47.8822]).addTo(map)
+    .bindPopup('Exemplo de localização.')
+    .openPopup();

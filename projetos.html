@@ -26,6 +26,9 @@
                 </a>
             </div>
         </div>
+
+            <!-- Vinculação ao script.js -->
+    <script src="script.js"></script>
     </header>
 
     <!-- Menu de Navegação -->
@@ -36,7 +39,9 @@
     </nav>
 
     <!-- Botão para abrir/fechar o formulário -->
-<button class="toggle-form-button" onclick="toggleForm()">✉️</button>
+    <div class="button-container">
+        <button class="toggle-form-button" id="toggleButton">✉️</button>
+    </div>
 
 <!-- Overlay (fundo escurecido) -->
 <div class="overlay hidden" id="overlay"></div>
@@ -93,9 +98,6 @@
             <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
         </div>
     </footer>
-
-    <!-- Vinculação ao script.js -->
-    <script src="script.js"></script>
     
 </body>
 </html>
