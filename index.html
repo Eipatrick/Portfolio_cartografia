@@ -9,16 +9,43 @@
         #map {
             height: 400px;
             width: 100%;
-            max-width: 800px; /* Limita a largura máxima do mapa */
-            margin: 20px auto; /* Centraliza o mapa na tela */
-            border: 2px solid #000; /* Adiciona uma borda ao mapa */
+            max-width: 800px;
+            margin: 20px auto;
+            border: 2px solid #000;
+        }
+
+        .edits-menu {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .edits-menu h3 {
+            margin-top: 0;
+        }
+
+        #edits-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #edits-list li {
+            margin: 5px 0;
+        }
+
+        #edits-list a {
+            text-decoration: none;
+            color: #0078a8;
+            cursor: pointer;
+        }
+
+        #edits-list a:hover {
+            text-decoration: underline;
         }
     </style>
-    <!-- Adicione a biblioteca do Leaflet para o OpenStreetMap -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
-        <!-- Vinculação ao script.js -->
-        <script src="script.js"></script>
 </head>
 <body>
 
@@ -58,40 +85,42 @@
             <p>Olá, meu nome é Paulo Patrick e sou estudante de geografia, também formado em engenharia civil. Busco contribuir com a sociedade fora do escopo capitalista através de análises geoespaciais, sociais, políticas e demais áreas envolventes do meio ambiente. O intuito deste portfólio é apresentar meus projetos acompanhados de meus posicionamentos filosóficos e políticos, não busco neutralidade, portanto deixo aqui minhas intenções para além da ciência geográfica.</p>
         </section>
 
-        <!-- Mapa do OpenStreetMap -->
-        <div id="map" class="map-container"></div>
+        <section class="banner">
+            <div class="banner-content">
+                <h1 class="animated-title">Minhas Contribuições no OpenStreetMap</h1>
+                <p class="animated-subtitle">Explore minhas edições e descubra como estou ajudando a mapear o mundo!</p>
+            </div>
+        </section>
+
+        <div class="map-container">
+            <!-- Mapa OpenStreetMap -->
+            <div id="map"></div>
+        
+            <!-- Menu de edições -->
+            <div class="edits-menu">
+                <h3>Minhas Últimas Edições no OpenStreetMap</h3>
+                <ul id="edits-list"></ul>
+            </div>
+        </div>
     </div>
 
-<!-- Rodapé -->
-<footer id="footer">
-    <p>Paulo Patrick Rodrigues da Silva, 2025.</p>
-    <p>
-        Este portfólio é de código aberto sob a 
-        <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
-        Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
-    </p>
+    <!-- Rodapé -->
+    <footer id="footer">
+        <p>Paulo Patrick Rodrigues da Silva, 2025.</p>
+        <p>
+            Este portfólio é de código aberto sob a 
+            <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
+            Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
+        </p>
 
-    <div class="ai-credit">
-        <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
-    </div>
-</footer>
-
+        <div class="ai-credit">
+            <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
+        </div>
+    </footer>
 
     <!-- Biblioteca do Leaflet -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        // Inicializa o mapa e define o centro e o nível de zoom
-        var map = L.map('map').setView([-23.5505, -46.6333], 13); // São Paulo como exemplo
-
-        // Adiciona o tile layer do OpenStreetMap ao mapa
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        // Adiciona um marcador ao mapa
-        L.marker([-23.5505, -46.6333]).addTo(map)
-            .bindPopup('São Paulo, Brasil')
-            .openPopup();
-    </script>
+    <!-- Vinculação ao script.js -->
+    <script src="script.js"></script>
 </body>
 </html>
