@@ -228,4 +228,18 @@ footer {
     text-decoration: underline;
 }
 
-/* Banner Título do Maoa */
+/* Estilo para o selo "IA Friendly" */
+        #ia-friendly {
+            position: fixed; /* Fixa o selo na tela */
+            top: 20px; /* Distância do topo */
+            right: 20px; /* Distância da direita */
+            opacity: 0.7; /* Transparência */
+            z-index: 1000; /* Garante que fique acima de outros elementos */
+            background-color: #0078a8; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            padding: 10px 15px; /* Espaçamento interno */
+            border-radius: 5px; /* Bordas arredondadas */
+            font-size: 14px; /* Tamanho da fonte */
+            font-weight: bold; /* Texto em negrito */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+        }
