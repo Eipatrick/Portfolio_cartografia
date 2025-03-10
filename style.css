@@ -3,16 +3,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f5f1e8; /* Bege claro */
+    color: #4a3f35; /* Marrom escuro */
     height: 100%;
     padding-bottom: 0; /* Ajuste para que o rodapé não sobreponha o conteúdo */
 }
 
 /* Cabeçalho */
 header {
-    background-color: #245526;
-    color: white;
+    background-color: #245526; /* Verde médio */
+    color: #f5f1e8; /* Bege claro */
     padding: 80px 0;
     text-align: center;
 }
@@ -21,18 +21,18 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #333;
+    background-color: #4a3f35; /* Marrom escuro */
 }
 
 nav a {
-    color: white;
+    color: #f5f1e8; /* Bege claro */
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
 }
 
 nav a:hover {
-    background-color: #575757;
+    background-color: #6b4f3a; /* Marrom médio */
 }
 
 /* Conteúdo principal */
@@ -42,7 +42,7 @@ nav a:hover {
 
 /* Projetos e artigos */
 .project, .article {
-    background-color: white;
+    background-color: #ffffff; /* Branco */
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
@@ -56,8 +56,8 @@ nav a:hover {
 
 /* Rodapé */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #4a3f35; /* Marrom escuro */
+    color: #f5f1e8; /* Bege claro */
     text-align: center;
     padding: 8px 0; /* Reduzi o padding */
     font-size: 14px; /* Tamanho da fonte reduzido */
@@ -71,14 +71,14 @@ footer {
 /* Créditos de IA */
 .ai-credit {
     font-size: 12px;
-    color: #888;
+    color: #a89f94; /* Marrom claro */
     text-align: center;
     margin-top: 15px;
 }
 
 /* Estilo do link da licença */
 .license-link {
-    color: #85cc88; /* Cor do texto */
+    color: #a89f94; /* Marrom claro */
     text-decoration: none; /* Remove o sublinhado */
     font-weight: bold; /* Opcional: deixa o texto em negrito */
 }
@@ -105,25 +105,25 @@ footer {
 }
 
 .osm-link {
-    background-color: #0078a8;
+    background-color: #6b4f3a; /* Marrom médio */
 }
 
 .linkedin-link {
-    background-color: #0077b5;
+    background-color: #8c6b54; /* Marrom mais claro */
 }
 
 .osm-link a, .linkedin-link a {
-    color: white;
+    color: #f5f1e8; /* Bege claro */
     text-decoration: none;
     font-weight: bold;
 }
 
 .osm-link:hover {
-    background-color: #005f82;
+    background-color: #5a4232; /* Marrom médio escuro */
 }
 
 .linkedin-link:hover {
-    background-color: #005f8a;
+    background-color: #7a5a46; /* Marrom mais claro escuro */
 }
 
 /* Responsividade para telas menores */
@@ -171,8 +171,8 @@ footer {
 /* Estilo do menu de edições */
 .edits-menu {
     flex: 1;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #f5f1e8; /* Bege claro */
+    border: 1px solid #d4c8b8; /* Marrom claro */
     border-radius: 8px;
     padding: 20px;
     max-height: 500px;
@@ -182,7 +182,7 @@ footer {
 .edits-menu h3 {
     margin-top: 0;
     font-size: 18px;
-    color: #333;
+    color: #4a3f35; /* Marrom escuro */
 }
 
 #edits-list {
@@ -193,11 +193,11 @@ footer {
 #edits-list li {
     margin-bottom: 10px;
     font-size: 14px;
-    color: #555;
+    color: #4a3f35; /* Marrom escuro */
 }
 
 #edits-list li a {
-    color: #0078a8;
+    color: #6b4f3a; /* Marrom médio */
     text-decoration: none;
 }
 
@@ -207,19 +207,19 @@ footer {
 
 /* Painel de contato */
 .contact-panel {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #f5f1e8; /* Bege claro */
+    border: 1px solid #d4c8b8; /* Marrom claro */
     border-radius: 8px;
     padding: 20px;
     margin: 20px 0;
     text-align: center;
     font-size: 16px;
-    color: #333;
+    color: #4a3f35; /* Marrom escuro */
 }
 
 /* Links dentro do painel */
 .contact-panel a {
-    color: #0078a8;
+    color: #6b4f3a; /* Marrom médio */
     text-decoration: none;
     font-weight: bold;
 }
@@ -229,17 +229,17 @@ footer {
 }
 
 /* Estilo para o selo "IA Friendly" */
-        #ia-friendly {
-            position: fixed; /* Fixa o selo na tela */
-            top: 20px; /* Distância do topo */
-            right: 20px; /* Distância da direita */
-            opacity: 0.7; /* Transparência */
-            z-index: 1000; /* Garante que fique acima de outros elementos */
-            background-color: #0078a8; /* Cor de fundo */
-            color: white; /* Cor do texto */
-            padding: 10px 15px; /* Espaçamento interno */
-            border-radius: 5px; /* Bordas arredondadas */
-            font-size: 14px; /* Tamanho da fonte */
-            font-weight: bold; /* Texto em negrito */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-        }
+#ia-friendly {
+    position: fixed; /* Fixa o selo na tela */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    opacity: 0.7; /* Transparência */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    background-color: #6b4f3a; /* Marrom médio */
+    color: #f5f1e8; /* Bege claro */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
