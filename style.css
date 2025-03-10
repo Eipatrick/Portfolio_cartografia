@@ -7,6 +7,7 @@ body {
     color: #4a3f35; /* Marrom escuro */
     height: 100%;
     padding-bottom: 0; /* Ajuste para que o rodapé não sobreponha o conteúdo */
+    text-align: center;
 }
 
 /* Cabeçalho */
@@ -37,7 +38,13 @@ nav a:hover {
 
 /* Conteúdo principal */
 .container {
+    width: 90%;
+    max-width: none;
+    margin: auto;
+    background: white;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Projetos e artigos */
@@ -242,4 +249,32 @@ footer {
     font-size: 14px; /* Tamanho da fonte */
     font-weight: bold; /* Texto em negrito */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilos para a seção de habilidades */
+.skill {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 20px;
+    background: #6b4f3a; /* Marrom médio */
+    width: 0;
+    text-align: right;
+    line-height: 20px;
+    color: white;
+    padding-right: 5px;
 }

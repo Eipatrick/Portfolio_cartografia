@@ -87,3 +87,10 @@ async function init() {
 
 // Inicializa o script
 init();
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".progress").forEach(function(bar) {
+        let width = bar.getAttribute("data-progress");
+        bar.style.width = width + "%";
+    });
+});
