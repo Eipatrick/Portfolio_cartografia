@@ -114,7 +114,7 @@ footer {
 }
 
 .osm-link {
-    background-color: #6b4f3a; /* Marrom médio */
+    background-color: #8c6b54; /* Marrom mais claro */
 }
 
 .linkedin-link {
@@ -122,11 +122,11 @@ footer {
 }
 
 .github-link {
-    background-color: #4a3f35; /* Marrom escuro */
+    background-color: #8c6b54; /* Marrom mais claro */
 }
 
 .osm-link:hover {
-    background-color: #5a4232; /* Marrom médio escuro */
+    background-color: #7a5a46; /* Marrom mais claro escuro */
 }
 
 .linkedin-link:hover {
@@ -134,7 +134,7 @@ footer {
 }
 
 .github-link:hover {
-    background-color: #6b4f3a; /* Marrom médio */
+    background-color: #7a5a46; /* Marrom mais claro escuro */
 }
 
 /* Estilo das imagens dentro dos botões */
