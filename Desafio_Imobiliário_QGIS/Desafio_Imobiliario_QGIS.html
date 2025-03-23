@@ -85,6 +85,54 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
+        /* Estilos para a caixa de comentários */
+.comentarios {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.comentarios h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.comentarios form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comentarios input, .comentarios textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.comentarios textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.comentarios button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.comentarios button:hover {
+    background-color: #0056b3;
+}
     </style>
 </head>
 <body>
@@ -115,6 +163,16 @@
             <a href="https://www.google.com/maps/d/edit?mid=1_nQhilDowjI2jtIZjiioh0ujLhyGL9I&usp=sharing" class="btn" target="_blank">Acessar Mapa no Google</a>
             <a href="Desafio_Imobiliario_Descomplica_QGIS.pdf" class="btn" download>Mapa em PDF</a>
             <a href="../projetos.html" class="btn btn-blog">Voltar</a>
+        </div>
+
+        <div class="comentarios">
+            <h2>Deixe seu comentário</h2>
+            <form id="form-comentario" action="salvar_comentario.php" method="POST">
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                <textarea id="comentario" name="comentario" placeholder="Escreva seu comentário aqui..." required></textarea>
+                <button type="submit">Enviar Comentário</button>
+            </form>
         </div>
 
         <div class="footer">
