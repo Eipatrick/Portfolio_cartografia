@@ -14,11 +14,11 @@ body {
 header {
     background-color: #245526; /* Verde médio */
     color: #f5f1e8; /* Bege claro */
-    padding: 80px 0;
+    padding: 50px;
     text-align: center;
 }
 
-        /* Estilos existentes */
+        /* Estilos foto */
         .sobre-container {
             display: flex;
             align-items: center;
@@ -304,6 +304,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 20px; /* Espaço entre a foto e o texto */
+    margin-bottom: 15px; /* Espaço abaixo do contêiner */
 }
 
 .sobre-container img {
