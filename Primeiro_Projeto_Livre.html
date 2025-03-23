@@ -32,6 +32,8 @@
             color: #34495e;
             margin-top: 30px;
             margin-bottom: 15px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
         }
         p {
             font-size: 1.1rem;
@@ -80,21 +82,21 @@
             font-size: 0.9rem;
             color: #777;
         }
-        #map {
-            height: 500px;
-            border-radius: 8px;
-            margin: 20px 0;
+        .license-link {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .license-link:hover {
+            text-decoration: underline;
         }
     </style>
-    <!-- Leaflet CSS e JS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Análise de Dados Geográficos: População, IDHM e PIB</h1>
+        <p><strong>Autor:</strong> Paulo Patrick Rodrigues da Silva</p>
         
-        <p>Este projeto não segue uma linha acadêmica, trata-se apenas de exercícios realizados livremente para demonstrar os aprendizados no curso <strong>DescomplicaQGIS</strong> até então, sendo atualizado no percorrer das aulas.</p>
+        <p><strong>Descrição:</strong> Este projeto não segue uma linha acadêmica, trata-se apenas de exercícios realizados livremente para demonstrar os aprendizados no curso <strong class="highlight">DescomplicaQGIS</strong> até então, sendo atualizado no percorrer das aulas.</p>
 
         <!-- Painel de Contato -->
         <div class="contact-panel">
@@ -103,20 +105,29 @@
             </p>
         </div>
 
-        <!-- Botões -->
-        <div>
-            <a href="https://drive.google.com/file/d/133eq6Sy_UjS6RySqDZbeOD54qGINbeDP/view?usp=sharing" class="btn" download>Baixar Geopackage</a>
+        <!-- Detalhes do Projeto -->
+        <h2>Detalhes do Projeto</h2>
+        <p>Este projeto consiste na análise de dados geográficos relacionados à população, Índice de Desenvolvimento Humano Municipal (IDHM) e Produto Interno Bruto (PIB) de diversas regiões. Utilizando ferramentas como QGIS, foram gerados mapas e visualizações interativas para facilitar a interpretação dos dados.</p>
 
-            <a href="https://drive.google.com/file/d/12dzL3EClY7Zyjola1pxPhUFtjVDffBXW/view" class="btn" download>Baixar Mapa Web</a>
+        <h2>Recursos Utilizados</h2>
+        <ul>
+            <li>QGIS para processamento e análise de dados geográficos.</li>
+            <li>Geopackage para armazenamento e compartilhamento de dados.</li>
+            <li>Leaflet.js para criação de mapas interativos na web.</li>
+        </ul>
 
-            <a href="index.html" class="btn btn-blog">Voltar ao Blog</a>
+                <!-- Botões -->
+                <div>
+                    <a href="https://drive.google.com/file/d/133eq6Sy_UjS6RySqDZbeOD54qGINbeDP/view?usp=sharing" class="btn" download>Baixar Geopackage</a>
+                    <a href="https://drive.google.com/file/d/12dzL3EClY7Zyjola1pxPhUFtjVDffBXW/view" class="btn" download>Baixar Mapa Web</a>
+                    <a href="projetos.html" class="btn btn-blog">Voltar</a>
+                </div>
+
+        <div class="footer">
+            Este projeto é de código aberto sob a 
+            <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
+            Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
         </div>
-    </div>
-
-    <div class="footer">
-        Este projeto é de código aberto sob a 
-        <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
-        Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
     </div>
 
 </body>
