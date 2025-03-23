@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Imobiliário "Descomplica QGIS" - Paulo Patrick Rodrigues da Silva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 20px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .btn-blog {
+            background-color: #6b4f3a; /* Marrom médio */
+        }
+        .btn-blog:hover {
+            background-color: #5a4232; /* Marrom médio escuro */
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .license-link {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .license-link:hover {
+            text-decoration: underline;
+        }
+        .map-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Desafio Imobiliário "Descomplica QGIS"</h1>
+        <p><strong>Autor:</strong> Paulo Patrick Rodrigues da Silva</p>
+        <p><strong>Descrição:</strong> Mapeamento urbanístico para determinação de área requisitada por cliente em São Paulo, visando investimento imobiliário.</p>
+
+        <h2>Requisitos do Cliente</h2>
+        <ul>
+            <li>Dentro do Município de São Paulo</li>
+            <li>Até 10 km do centroide do Bairro Sé</li>
+            <li>Até 10 min a pé de estações de metrô</li>
+            <li>Afastado, no mínimo, 3 km de aeroportos (Congonhas e Campo de Marte)</li>
+            <li>Afastado, no mínimo, 200 m de áreas de risco (alagamento e inundação)</li>
+            <li>Rua sem Zona Azul</li>
+            <li>Densidade populacional abaixo de 100 hab./ha</li>
+            <li>Proximidade de hospitais, escolas e delegacias de polícia</li>
+        </ul>
+
+        <!-- Imagem do Mapa -->
+        <h2>Mapa Gerado</h2>
+        <img src="Desafio_Imobiliario_Descomplica_QGIS.png" alt="Mapa do Desafio Imobiliário" class="map-image">
+
+        <h2>Recursos e Links</h2>
+        <div>
+            <a href="https://drive.google.com/file/d/1XZ5mvehy4f1v2sUjXHnM4rWj-N7mpTT4/view?usp=sharing" class="btn" download>Baixar ShapeFile</a>
+            <a href="https://www.google.com/maps/d/edit?mid=1_nQhilDowjI2jtIZjiioh0ujLhyGL9I&usp=sharing" class="btn" target="_blank">Acessar Mapa no Google</a>
+            <a href="Desafio_Imobiliario_Descomplica_QGIS.pdf" class="btn" download>Mapa em PDF</a>
+            <a href="projetos.html" class="btn btn-blog">Voltar</a>
+        </div>
+
+        <div class="footer">
+            Este projeto é de código aberto sob a 
+            <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
+            Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
+        </div>
+    </div>
+</body>
+</html>
