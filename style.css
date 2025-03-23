@@ -298,3 +298,38 @@ footer {
     color: white;
     padding-right: 5px;
 }
+
+/* Estilos gerais para a seção "Sobre Mim" */
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre a foto e o texto */
+}
+
+.sobre-container img {
+    width: 150px; /* Tamanho da foto */
+    height: auto;
+    border-radius: 50%; /* Foto redonda */
+    border: 2px solid #ccc; /* Borda opcional */
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+/* Estilos para dispositivos móveis (telas menores que 768px) */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column; /* Coloca a foto acima do texto */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .sobre-container img {
+        width: 120px; /* Reduz o tamanho da foto */
+        margin-bottom: 15px; /* Espaço entre a foto e o texto */
+    }
+
+    .sobre-texto {
+        width: 100%; /* Ocupa a largura total */
+    }
+}
