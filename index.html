@@ -9,7 +9,34 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-        /* Estilos existentes */
+        /* Estilos para o cabeçalho com imagem de fundo */
+        header {
+            position: relative;
+            padding: 20px;
+            text-align: center;
+            color: white; /* Cor do texto para contrastar com o fundo */
+            background-image: url(cartografia-enfoque-01-3690593650.jpg); /* Caminho da imagem de fundo */
+            background-size: cover; /* Cobrir todo o espaço do cabeçalho */
+            background-position: center; /* Centralizar a imagem */
+            background-repeat: no-repeat; /* Evitar repetição */
+            background-blend-mode: overlay; /* Mesclar a imagem com a cor de fundo */
+            background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura para melhorar a legibilidade */
+        }
+
+        header h1, header p {
+            position: relative;
+            z-index: 1; /* Garantir que o texto fique acima da imagem de fundo */
+        }
+
+        #buttons {
+            position: relative;
+            z-index: 1; /* Garantir que os botões fiquem acima da imagem de fundo */
+            margin-top: 10px;
+        }
+
+        #buttons img {
+            filter: brightness(1) invert(0); /* Tornar os ícones brancos */
+        }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
@@ -17,32 +44,32 @@
     <!-- Selo "IA Friendly" -->
     <div id="ia-friendly">IA Integrada</div>
 
-    <!-- Cabeçalho -->
+    <!-- Cabeçalho com imagem de fundo -->
     <header>
         <h1>Portfólio Geográfico</h1>
         <p>Bem-vindo ao meu portfólio de projetos para a América Latina.</p>
         <p>Paulo Patrick Rodrigues da Silva</p>
 
-<!-- Botões OpenStreetMap, LinkedIn e GitHub -->
-<div id="buttons">
-    <div class="osm-link">
-        <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap" width="24" height="24">
-        </a>
-    </div>
+        <!-- Botões OpenStreetMap, LinkedIn e GitHub -->
+        <div id="buttons">
+            <div class="osm-link">
+                <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap" width="24" height="24">
+                </a>
+            </div>
 
-    <div class="linkedin-link">
-        <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="24" height="24">
-        </a>
-    </div>
+            <div class="linkedin-link">
+                <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="24" height="24">
+                </a>
+            </div>
 
-    <div class="github-link">
-        <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="24" height="24">
-        </a>
-    </div>
-</div>
+            <div class="github-link">
+                <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="24" height="24">
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- Menu de Navegação -->
@@ -57,8 +84,13 @@
     <div class="container">
         <!-- Seção Sobre -->
         <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <p>Olá, meu nome é Paulo Patrick e sou estudante de geografia, também formado em engenharia civil. Busco contribuir com a sociedade fora do escopo capitalista através de análises geoespaciais, sociais, políticas e demais áreas envolventes do meio ambiente, focado na América Latina. O intuito deste portfólio é apresentar meus projetos acompanhados de meus posicionamentos filosóficos e políticos, sem neutralidade, portanto deixo aqui minhas intenções para além da ciência geográfica.</p>
+            <div class="sobre-container">
+                <img src="foto_perfil.jpg" alt="Foto de Paulo Patrick">
+                <div class="sobre-texto">
+                    <h2>Sobre Mim</h2>
+                    <p>Olá, meu nome é Paulo Patrick e sou estudante de geografia, também formado em engenharia civil. Busco contribuir com a sociedade fora do escopo capitalista através de análises geoespaciais, sociais, políticas e demais áreas envolventes do meio ambiente, focado na América Latina. O intuito deste portfólio é apresentar meus projetos acompanhados de meus posicionamentos filosóficos e políticos, sem neutralidade, portanto deixo aqui minhas intenções para além da ciência geográfica.</p>
+                </div>
+            </div>
         </section>
 
         <div class="container">

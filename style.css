@@ -18,6 +18,24 @@ header {
     text-align: center;
 }
 
+        /* Estilos existentes */
+        .sobre-container {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Espaço entre a imagem e o texto */
+        }
+
+        .sobre-container img {
+            width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: auto;
+            border-radius: 50%; /* Para uma imagem redonda */
+            border: 3px solid #ccc; /* Borda opcional */
+        }
+
+        .sobre-texto {
+            flex: 1;
+        }
+
 /* Menu de navegação */
 nav {
     display: flex;

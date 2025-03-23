@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artigos - Portfólio Geográfico</title>
-    <link rel="stylesheet" href="style.css">
-           <!-- Favicon -->
-           <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - Portfólio Geográfico</title>
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style>
+            /* Estilos para o cabeçalho com imagem de fundo */
+            header {
+                position: relative;
+                padding: 20px;
+                text-align: center;
+                color: white; /* Cor do texto para contrastar com o fundo */
+                background-image: url(cartografia-enfoque-01-3690593650.jpg); /* Caminho da imagem de fundo */
+                background-size: cover; /* Cobrir todo o espaço do cabeçalho */
+                background-position: center; /* Centralizar a imagem */
+                background-repeat: no-repeat; /* Evitar repetição */
+                background-blend-mode: overlay; /* Mesclar a imagem com a cor de fundo */
+                background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura para melhorar a legibilidade */
+            }
+    
+            header h1, header p {
+                position: relative;
+                z-index: 1; /* Garantir que o texto fique acima da imagem de fundo */
+            }
+    
+            #buttons {
+                position: relative;
+                z-index: 1; /* Garantir que os botões fiquem acima da imagem de fundo */
+                margin-top: 10px;
+            }
+    
+            #buttons img {
+                filter: brightness(1) invert(0); /* Tornar os ícones brancos */
+            }
+        </style>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    </head>
 <body>
         <!-- Selo "IA Friendly" -->
         <div id="ia-friendly">IA Integrada</div>
