@@ -1,125 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artigos Geoespaciais | Paulo Patrick</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - Portfólio Geográfico</title>
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style>
+            /* Estilos para o cabeçalho com imagem de fundo */
+            header {
+                position: relative;
+                text-align: center;
+                color: white; /* Cor do texto para contrastar com o fundo */
+                background-image: url(Terra.jpg); /* Caminho da imagem de fundo */
+                background-size: cover; /* Cobrir todo o espaço do cabeçalho */
+                background-position: center; /* Centralizar a imagem */
+                background-repeat: no-repeat; /* Evitar repetição */
+                background-blend-mode: overlay; /* Mesclar a imagem com a cor de fundo */
+                background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura para melhorar a legibilidade */
+            }
+    
+            header h1, header p {
+                position: relative;
+                z-index: 1; /* Garantir que o texto fique acima da imagem de fundo */
+            }
+    
+            #buttons {
+                position: relative;
+                z-index: 1; /* Garantir que os botões fiquem acima da imagem de fundo */
+                margin-top: 10px;
+            }
+    
+            #buttons img {
+                filter: brightness(1) invert(0); /* Tornar os ícones brancos */
+            }
+        </style>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    </head>
 <body>
-    <!-- Selo "IA Integrada" -->
-    <div id="ia-friendly">Feito com IA</div>
-
+        <!-- Selo "IA Friendly" -->
+        <div id="ia-friendly">IA Integrada</div>
+    <!-- Cabeçalho -->
     <!-- Cabeçalho -->
     <header>
-        <div class="container">
-            <h1>Artigos Científicos</h1>
-            <p>Análises e pesquisas em geotecnologias e desenvolvimento territorial</p>
-            <p>Paulo Patrick Rodrigues da Silva</p>
+        <h1>Portfólio Geográfico</h1>
+        <p>Bem-vindo ao meu portfólio de projetos para a América Latina.</p>
+        <p>Paulo Patrick Rodrigues da Silva</p>
 
-            <!-- Botões sociais -->
-            <div id="buttons">
-                <a href="https://www.openstreetmap.org/user/eipatrick" class="social-link" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap">
-                </a>
-                <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" class="social-link" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-                </a>
-                <a href="https://github.com/Eipatrick/Portfolio_cartografia" class="social-link" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
-                </a>
-            </div>
+<!-- Botões OpenStreetMap, LinkedIn e GitHub -->
+<div id="buttons">
+    <div class="osm-link">
+        <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap" width="24" height="24">
+        </a>
+    </div>
+
+    <div class="linkedin-link">
+        <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="24" height="24">
+        </a>
+    </div>
+
+    <div class="github-link">
+        <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="24" height="24">
+        </a>
+    </div>
+</div>
         </div>
+
+            <!-- Vinculação ao script.js -->
+    <script src="script.js"></script>
     </header>
 
     <!-- Menu de Navegação -->
     <nav>
-        <div class="container">
-            <a href="index.html">Início</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="artigos.html">Artigos</a>
-            <a href="contato.html">Contato</a>
-        </div>
+        <a href="index.html">Home</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="contato.html">Contato</a>
     </nav>
 
     <!-- Conteúdo Principal -->
     <div class="container">
         <!-- Seção Artigos -->
         <section id="artigos">
-            <h2>Publicações Recentes</h2>
+            <h2>Artigos</h2>
 
-            <div class="article-grid">
-                <!-- Artigo 1 -->
-                <div class="article-card">
-                    <h3>Geotecnologias Aplicadas ao Desenvolvimento Sustentável</h3>
-                    <div class="article-meta">
-                        <span class="article-date">Publicado em: 15/03/2024</span>
-                        <span class="article-category">Revista GeoAmérica</span>
-                    </div>
-                    <p>Como as geotecnologias podem contribuir para a compreensão e solução de problemas ambientais na América Latina, com estudos de caso em monitoramento de desmatamento e gestão de recursos hídricos.</p>
-                    <div class="article-tags">
-                        <span class="article-tag">Sensoriamento Remoto</span>
-                        <span class="article-tag">Sustentabilidade</span>
-                        <span class="article-tag">QGIS</span>
-                    </div>
-                    <a href="artigo1.html" class="article-link">Ler Artigo Completo</a>
-                </div>
-
-                <!-- Artigo 2 -->
-                <div class="article-card">
-                    <h3>Análise Geoespacial do Mercado Imobiliário em São Paulo</h3>
-                    <div class="article-meta">
-                        <span class="article-date">Publicado em: 10/02/2024</span>
-                        <span class="article-category">Congresso Brasileiro de Geografia</span>
-                    </div>
-                    <p>Métodos de geoprocessamento aplicados à identificação de áreas estratégicas para investimento imobiliário, considerando variáveis como infraestrutura, acessibilidade e indicadores socioeconômicos.</p>
-                    <div class="article-tags">
-                        <span class="article-tag">Geomarketing</span>
-                        <span class="article-tag">Urbanismo</span>
-                        <span class="article-tag">Análise Espacial</span>
-                    </div>
-                    <a href="artigo2.html" class="article-link">Ler Artigo Completo</a>
-                </div>
-
-                <!-- Artigo 3 -->
-                <div class="article-card">
-                    <h3>Integração de Dados Geoespaciais em Bancos de Dados</h3>
-                    <div class="article-meta">
-                        <span class="article-date">Publicado em: 25/01/2024</span>
-                        <span class="article-category">Simpósio de Geoinformática</span>
-                    </div>
-                    <p>Abordagens técnicas para armazenamento e consulta eficiente de dados geográficos em bancos de dados relacionais, com exemplos práticos utilizando PostgreSQL/PostGIS.</p>
-                    <div class="article-tags">
-                        <span class="article-tag">Banco de Dados</span>
-                        <span class="article-tag">PostGIS</span>
-                        <span class="article-tag">SQL</span>
-                    </div>
-                    <a href="artigo3.html" class="article-link">Ler Artigo Completo</a>
-                </div>
+            <!-- Artigo 1 -->
+            <div class="article">
+                <h3>Título exemplar</h3>
+                <p class="date">Publicado em: 10 de outubro de 2023</p>
+                <p>Neste artigo, discuto como a geografia pode contribuir para a compreensão e solução de problemas sociais e ambientais no mundo atual.</p>
+                <a href="artigo1.html">Leia mais</a>
             </div>
         </section>
     </div>
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <p>Paulo Patrick Rodrigues da Silva, 2025.</p>
-            <div class="footer">
-                Este projeto é de código aberto sob a 
-                <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
-                Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
-            </div>
-            
-            <div class="ai-credit">
-                <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
-            </div>
-        </div>
-    </footer>
+<!-- Rodapé -->
+<footer id="footer">
+    <p>Paulo Patrick Rodrigues da Silva, 2025.</p>
+    <p>
+        Este portfólio é de código aberto sob a 
+        <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
+        Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
+    </p>
 
-    <!-- Vinculação ao script.js -->
-    <script src="script.js"></script>
+    <div class="ai-credit">
+        <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
+    </div>
+</footer>
+
 </body>
 </html>

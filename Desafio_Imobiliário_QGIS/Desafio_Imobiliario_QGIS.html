@@ -4,311 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Imobiliário "Descomplica QGIS" - Paulo Patrick Rodrigues da Silva</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --neon-green: #00ff9d;
-            --neon-blue: #00e1ff;
-            --neon-purple: #bd00ff;
-            --dark-bg: #0d0221;
-            --darker-bg: #02010a;
-            --cyber-text: #b5b5b5;
-            --cyber-yellow: #f9f002;
-            --map-orange: #ff7b00;
-        }
-
         body {
-            font-family: 'Rajdhani', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: var(--dark-bg);
-            color: var(--cyber-text);
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(0, 255, 157, 0.08) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(0, 225, 255, 0.08) 0%, transparent 20%),
-                linear-gradient(to bottom, transparent 95%, rgba(189, 0, 255, 0.1) 100%);
+            background-color: #f9f9f9;
+            color: #333;
         }
-
         .container {
             max-width: 800px;
             margin: 20px auto;
-            padding: 30px;
-            background: rgba(2, 1, 10, 0.85);
-            border: 1px solid var(--neon-purple);
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            box-shadow: 0 0 20px rgba(189, 0, 255, 0.3);
-            position: relative;
-            overflow: hidden;
         }
-
-        .container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--neon-green), var(--neon-blue), var(--neon-purple));
-        }
-
         h1, h2 {
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            color: #2c3e50;
         }
-
         h1 {
             text-align: center;
-            margin-bottom: 25px;
-            color: var(--neon-green);
-            text-shadow: 0 0 10px var(--neon-green);
-            animation: glitch 3s infinite;
+            margin-bottom: 20px;
         }
-
         h2 {
-            margin-top: 30px;
-            border-bottom: 2px solid var(--neon-blue);
-            padding-bottom: 8px;
-            color: var(--neon-blue);
+            margin-top: 20px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
         }
-
-        p, li {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        strong {
-            color: var(--neon-green);
-        }
-
         ul {
-            list-style-type: none;
-            padding-left: 0;
+            list-style-type: disc;
+            margin-left: 20px;
         }
-
-        li {
-            margin-bottom: 12px;
-            padding-left: 25px;
-            position: relative;
+        a {
+            color: #3498db;
+            text-decoration: none;
         }
-
-        li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--neon-purple);
+        a:hover {
+            text-decoration: underline;
         }
-
-        .btn-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 25px 0;
-        }
-
         .btn {
             display: inline-block;
-            padding: 12px 24px;
-            background: transparent;
-            color: var(--neon-green);
-            border: 1px solid var(--neon-green);
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #3498db;
+            color: #fff;
             border-radius: 5px;
-            text-decoration: none;
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            text-align: center;
+            transition: background-color 0.3s ease;
         }
-
         .btn:hover {
-            background: rgba(0, 255, 157, 0.1);
-            box-shadow: 0 0 15px var(--neon-green);
-            transform: translateY(-2px);
+            background-color: #2980b9;
         }
-
-        .btn::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 157, 0.4), transparent);
-            transition: all 0.6s ease;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
         .btn-blog {
-            color: var(--neon-purple);
-            border-color: var(--neon-purple);
+            background-color: #6b4f3a; /* Marrom médio */
         }
-
         .btn-blog:hover {
-            background: rgba(189, 0, 255, 0.1);
-            box-shadow: 0 0 15px var(--neon-purple);
+            background-color: #5a4232; /* Marrom médio escuro */
         }
-
         .footer {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 30px;
             font-size: 0.9em;
-            color: var(--cyber-text);
-            border-top: 1px solid rgba(0, 225, 255, 0.3);
-            padding-top: 20px;
+            color: #777;
         }
-
         .license-link {
-            color: var(--neon-blue);
+            color: #3498db;
             text-decoration: none;
-            transition: all 0.3s ease;
         }
-
         .license-link:hover {
-            color: var(--neon-green);
-            text-shadow: 0 0 5px var(--neon-green);
+            text-decoration: underline;
         }
-
         .map-image {
             width: 100%;
             max-width: 600px;
             height: auto;
             display: block;
-            margin: 25px auto;
+            margin: 20px auto;
             border-radius: 8px;
-            border: 1px solid var(--neon-blue);
-            box-shadow: 0 0 20px rgba(0, 225, 255, 0.2);
-            transition: transform 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .map-image:hover {
-            transform: scale(1.02);
-        }
+        /* Estilos para a caixa de comentários */
+.comentarios {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
 
-        /* Animações */
-        @keyframes glitch {
-            0% { text-shadow: 2px 0 var(--neon-blue), -2px 0 var(--neon-purple); }
-            25% { text-shadow: -2px 0 var(--neon-purple), 2px 0 var(--neon-green); }
-            50% { text-shadow: 2px 0 var(--map-orange), -2px 0 var(--cyber-yellow); }
-            75% { text-shadow: -2px 0 var(--cyber-yellow), 2px 0 var(--map-orange); }
-            100% { text-shadow: 2px 0 var(--neon-blue), -2px 0 var(--neon-purple); }
-        }
+.comentarios h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
 
-        @keyframes scanlines {
-            from { background-position: 0 0; }
-            to { background-position: 0 10px; }
-        }
+.comentarios form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-        /* Efeito de scanlines */
-        body::after {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                linear-gradient(rgba(0, 0, 0, 0.1) 50%, transparent 50%),
-                linear-gradient(90deg, rgba(0, 225, 255, 0.03), rgba(189, 0, 255, 0.03), rgba(0, 225, 255, 0.03));
-            background-size: 100% 2px, 3px 100%;
-            pointer-events: none;
-            animation: scanlines 2s linear infinite;
-            z-index: 1000;
-        }
+.comentarios input, .comentarios textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
 
-        /* Caixa de comentários cyberpunk */
-        .comentarios {
-            margin: 30px auto;
-            padding: 25px;
-            background: rgba(13, 2, 33, 0.7);
-            border: 1px solid var(--neon-blue);
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 225, 255, 0.2);
-        }
+.comentarios textarea {
+    resize: vertical;
+    height: 100px;
+}
 
-        .comentarios h2 {
-            color: var(--neon-purple);
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
+.comentarios button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-        .comentarios form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .comentarios input, .comentarios textarea {
-            padding: 12px;
-            background: rgba(13, 2, 33, 0.8);
-            border: 1px solid var(--neon-blue);
-            border-radius: 5px;
-            color: var(--cyber-text);
-            font-family: 'Rajdhani', sans-serif;
-            transition: all 0.3s ease;
-        }
-
-        .comentarios input:focus, .comentarios textarea:focus {
-            outline: none;
-            border-color: var(--neon-green);
-            box-shadow: 0 0 10px var(--neon-green);
-        }
-
-        .comentarios textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .comentarios button {
-            padding: 12px 24px;
-            background: transparent;
-            color: var(--neon-blue);
-            border: 1px solid var(--neon-blue);
-            border-radius: 5px;
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .comentarios button:hover {
-            background: rgba(0, 225, 255, 0.1);
-            box-shadow: 0 0 15px var(--neon-blue);
-            color: var(--neon-green);
-            border-color: var(--neon-green);
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-                margin: 10px;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            .btn-container {
-                flex-direction: column;
-            }
-            
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
-        }
+.comentarios button:hover {
+    background-color: #0056b3;
+}
     </style>
 </head>
 <body>
@@ -334,21 +158,20 @@
         <img src="Desafio_Imobiliario_Descomplica_QGIS.png" alt="Mapa do Desafio Imobiliário" class="map-image">
 
         <h2>Recursos e Links</h2>
-        <div class="btn-container">
+        <div>
             <a href="https://drive.google.com/file/d/1XZ5mvehy4f1v2sUjXHnM4rWj-N7mpTT4/view?usp=sharing" class="btn" download>Baixar ShapeFile</a>
             <a href="https://www.google.com/maps/d/edit?mid=1_nQhilDowjI2jtIZjiioh0ujLhyGL9I&usp=sharing" class="btn" target="_blank">Acessar Mapa no Google</a>
             <a href="Desafio_Imobiliario_Descomplica_QGIS.pdf" class="btn" download>Mapa em PDF</a>
             <a href="../projetos.html" class="btn btn-blog">Voltar</a>
         </div>
 
-        <!-- Seção de Comentários -->
         <div class="comentarios">
-            <h2>Terminal de Feedback</h2>
-            <form>
-                <input type="text" placeholder="Seu nome" required>
-                <input type="email" placeholder="Seu e-mail (opcional)">
-                <textarea placeholder="Deixe seu comentário ou feedback..." required></textarea>
-                <button type="submit">Enviar</button>
+            <h2>Deixe seu comentário</h2>
+            <form id="form-comentario" action="../salvar_comentario.php" method="POST">
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                <textarea id="comentario" name="comentario" placeholder="Escreva seu comentário aqui..." required></textarea>
+                <button type="submit">Enviar Comentário</button>
             </form>
         </div>
 

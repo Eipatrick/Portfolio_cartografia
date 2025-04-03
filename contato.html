@@ -1,134 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato | Paulo Patrick</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - Portfólio Geográfico</title>
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style>
+            /* Estilos para o cabeçalho com imagem de fundo */
+            header {
+                position: relative;
+                text-align: center;
+                color: white; /* Cor do texto para contrastar com o fundo */
+                background-image: url(Terra.jpg); /* Caminho da imagem de fundo */
+                background-size: cover; /* Cobrir todo o espaço do cabeçalho */
+                background-position: center; /* Centralizar a imagem */
+                background-repeat: no-repeat; /* Evitar repetição */
+                background-blend-mode: overlay; /* Mesclar a imagem com a cor de fundo */
+                background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura para melhorar a legibilidade */
+            }
+    
+            header h1, header p {
+                position: relative;
+                z-index: 1; /* Garantir que o texto fique acima da imagem de fundo */
+            }
+    
+            #buttons {
+                position: relative;
+                z-index: 1; /* Garantir que os botões fiquem acima da imagem de fundo */
+                margin-top: 10px;
+            }
+    
+            #buttons img {
+                filter: brightness(1) invert(0); /* Tornar os ícones brancos */
+            }
+        </style>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    </head>
 <body>
-    <!-- Selo "IA Integrada" -->
-    <div id="ia-friendly">Feito com IA</div>
-
+        <!-- Selo "IA Friendly" -->
+        <div id="ia-friendly">IA Integrada</div>
+    <!-- Cabeçalho -->
     <!-- Cabeçalho -->
     <header>
-        <div class="container">
-            <h1>Entre em Contato</h1>
-            <p>Vamos conversar sobre geotecnologias, projetos e colaborações</p>
-            <p>Paulo Patrick Rodrigues da Silva</p>
+        <h1>Portfólio Geográfico</h1>
+        <p>Bem-vindo ao meu portfólio de projetos para a América Latina.</p>
+        <p>Paulo Patrick Rodrigues da Silva</p>
 
-            <!-- Botões sociais -->
-            <div id="buttons">
-                <a href="https://www.openstreetmap.org/user/eipatrick" class="social-link" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap">
-                </a>
-                <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" class="social-link" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-                </a>
-                <a href="https://github.com/Eipatrick/Portfolio_cartografia" class="social-link" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
-                </a>
-            </div>
-        </div>
+        <!-- Links flutuantes -->
+<!-- Botões OpenStreetMap, LinkedIn e GitHub -->
+<div id="buttons">
+    <div class="osm-link">
+        <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap" width="24" height="24">
+        </a>
+    </div>
+
+    <div class="linkedin-link">
+        <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="24" height="24">
+        </a>
+    </div>
+
+    <div class="github-link">
+        <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="24" height="24">
+        </a>
+    </div>
+</div>
     </header>
 
     <!-- Menu de Navegação -->
     <nav>
-        <div class="container">
-            <a href="index.html">Início</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="contato.html">Contato</a>
-        </div>
+        <a href="index.html">Home</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="contato.html">Contato</a>
     </nav>
 
-    <!-- Seção Contato -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-container">
-                <h2>Canais de Comunicação</h2>
-                
-                <div class="contact-methods">
-                    <!-- Email -->
-                    <div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-info">
-                            <h3>Email</h3>
-                            <a href="mailto:paulopatrick@proton.me">paulopatrick@proton.me</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Phiz -->
-                    <div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fas fa-comment-dots"></i>
-                        </div>
-                        <div class="contact-info">
-                            <h3>Phiz</h3>
-                            <a href="https://share.phiz.chat/contact?params=YXBwTGluaz1waGl6c2NoZW1lOi8vdXNlcklkPTEwMDEzOTQ0JmZyb21Vc2VySWQ9MTAwMTM5NDQmc2hhcmVUeXBlPWNvbnRhY3Q=&token=b394e3e7cd7e474a995d1f532e567cfd" target="_blank">Envie uma mensagem</a>
-                        </div>
-                    </div>
-                    
-                    <!-- LinkedIn -->
-                    <div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </div>
-                        <div class="contact-info">
-                            <h3>LinkedIn</h3>
-                            <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank">Conecte-se no LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Formulário de Contato -->
-                <div class="contact-form">
-                    <h3>Envie uma Mensagem Direta</h3>
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Assunto</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="contact-panel">
+        <p>
+            Fale comigo pelo meu e-mail 
+            <a href="mailto:paulopatrick@proton.me">paulopatrick@proton.me</a> 
+            ou pelo aplicativo de mensagens Phiz, 
+            <a href="https://share.phiz.chat/contact?params=YXBwTGluaz1waGl6c2NoZW1lOi8vdXNlcklkPTEwMDEzOTQ0JmZyb21Vc2VySWQ9MTAwMTM5NDQmc2hhcmVUeXBlPWNvbnRhY3Q=&token=b394e3e7cd7e474a995d1f532e567cfd" target="_blank">clicando aqui</a>.
+        </p>
+    </div>
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <p>Paulo Patrick Rodrigues da Silva, 2025.</p>
-            <div class="footer">
-                Este projeto é de código aberto sob a 
-                <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
-                Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
-            </div>
-            
-            <div class="ai-credit">
-                <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
-            </div>
-        </div>
-    </footer>
+<!-- Rodapé -->
+<footer id="footer">
+    <p>Paulo Patrick Rodrigues da Silva, 2025.</p>
+    <p>
+        Este portfólio é de código aberto sob a 
+        <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
+        Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
+    </p>
+
+    <div class="ai-credit">
+        <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
+    </div>
+</footer>
 
     <!-- Vinculação ao script.js -->
     <script src="script.js"></script>
+
 </body>
 </html>

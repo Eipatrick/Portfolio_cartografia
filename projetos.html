@@ -1,104 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos Geoespaciais | Paulo Patrick</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - Portfólio Geográfico</title>
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style>
+            /* Estilos para o cabeçalho com imagem de fundo */
+            header {
+                position: relative;
+                text-align: center;
+                color: white; /* Cor do texto para contrastar com o fundo */
+                background-image: url(Terra.jpg); /* Caminho da imagem de fundo */
+                background-size: cover; /* Cobrir todo o espaço do cabeçalho */
+                background-position: center; /* Centralizar a imagem */
+                background-repeat: no-repeat; /* Evitar repetição */
+                background-blend-mode: overlay; /* Mesclar a imagem com a cor de fundo */
+                background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura para melhorar a legibilidade */
+            }
+    
+            header h1, header p {
+                position: relative;
+                z-index: 1; /* Garantir que o texto fique acima da imagem de fundo */
+            }
+    
+            #buttons {
+                position: relative;
+                z-index: 1; /* Garantir que os botões fiquem acima da imagem de fundo */
+                margin-top: 10px;
+            }
+    
+            #buttons img {
+                filter: brightness(1) invert(0); /* Tornar os ícones brancos */
+            }
+        </style>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    </head>
 <body>
-    <!-- Selo "IA Integrada" -->
-    <div id="ia-friendly">Feito com IA</div>
+    <!-- Selo "IA Friendly" -->
+    <div id="ia-friendly">IA Integrada</div>
 
     <!-- Cabeçalho -->
     <header>
-        <div class="container">
-            <h1>Projetos Geoespaciais</h1>
-            <p>Análises territoriais e soluções inovadoras para a América Latina</p>
-            <p>Paulo Patrick Rodrigues da Silva</p>
+        <h1>Portfólio Geográfico</h1>
+        <p>Bem-vindo ao meu portfólio de projetos para a América Latina.</p>
+        <p>Paulo Patrick Rodrigues da Silva</p>
 
-            <!-- Botões sociais -->
-            <div id="buttons">
-                <a href="https://www.openstreetmap.org/user/eipatrick" class="social-link" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap">
-                </a>
-                <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" class="social-link" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-                </a>
-                <a href="https://github.com/Eipatrick/Portfolio_cartografia" class="social-link" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
-                </a>
-            </div>
-        </div>
+<!-- Botões OpenStreetMap, LinkedIn e GitHub -->
+<div id="buttons">
+    <div class="osm-link">
+        <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap" width="24" height="24">
+        </a>
+    </div>
+
+    <div class="linkedin-link">
+        <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="24" height="24">
+        </a>
+    </div>
+
+    <div class="github-link">
+        <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="24" height="24">
+        </a>
+    </div>
+</div>
     </header>
 
     <!-- Menu de Navegação -->
     <nav>
-        <div class="container">
-            <a href="index.html">Início</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="contato.html">Contato</a>
-        </div>
+        <a href="index.html">Home</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="contato.html">Contato</a>
     </nav>
 
-    <!-- Conteúdo Principal -->
-    <div class="container">
-        <!-- Seção Projetos -->
-        <section id="projetos">
-            <h2>Meus Projetos</h2>
+   <!-- Conteúdo Principal -->
+<div class="container">
+    <!-- Seção Projetos -->
+    <section id="projetos">
+        <h2>Projetos</h2>
 
-            <!-- Projeto 2 - Desafio Imobiliário -->
-            <div class="project">
-                <h3>Desafio Imobiliário: Mapeamento Urbanístico em São Paulo</h3>
-                <p>Este projeto consiste em um <strong>mapeamento urbanístico</strong> para determinação de áreas estratégicas em São Paulo, visando <strong>investimento imobiliário</strong>. O cliente solicitou uma análise com base em critérios específicos, como:</p>
-                <ul>
-                    <li>Proximidade de estações de metrô</li>
-                    <li>Afastamento de áreas de risco</li>
-                    <li>Densidade populacional</li>
-                    <li>Infraestrutura urbana</li>
-                </ul>
-                <p>Desenvolvido utilizando <strong>QGIS</strong> como parte do curso <strong>Descomplica QGIS</strong>, este projeto demonstra a aplicação prática de geoprocessamento no mercado imobiliário.</p>
-                <p>Os dados e mapas gerados estão disponíveis para download e visualização interativa.</p>
-                <a href="Desafio_Imobiliário_QGIS/Desafio_Imobiliario_QGIS.html" class="btn">Acessar Projeto</a>
-            </div>
+        <!-- Projeto 2 - Desafio Imobiliário -->
+        <div class="project">
+            <h3>Desafio Imobiliário: Mapeamento Urbanístico em São Paulo</h3>
+            <p>Este projeto consiste em um mapeamento urbanístico para determinação de áreas estratégicas em São Paulo, visando investimento imobiliário. O cliente solicitou uma análise com base em critérios específicos, como proximidade de estações de metrô, afastamento de áreas de risco e densidade populacional.</p>
+            <p>O projeto foi desenvolvido utilizando o <strong>QGIS</strong> e faz parte do curso <strong>Descomplica QGIS</strong>. Os dados e mapas gerados estão disponíveis para download e visualização.</p>
+            <a href="Desafio_Imobiliário_QGIS/Desafio_Imobiliario_QGIS.html" class="btn">Acessar</a>
+        </div>
 
-            <!-- Projeto 1 -->
-            <div class="project">
-                <h3>Análise de Dados Geográficos: População, IDHM e PIB</h3>
-                <p>Primeiro projeto de mapeamento e análise de dados geográficos explorando a relação entre indicadores socioeconômicos fundamentais:</p>
-                <ul>
-                    <li><strong>População</strong> (distribuição demográfica)</li>
-                    <li><strong>Índice de Desenvolvimento Humano Municipal (IDHM)</strong></li>
-                    <li><strong>Produto Interno Bruto (PIB)</strong></li>
-                </ul>
-                <p>Desenvolvido com <strong>QGIS</strong> como parte do curso <strong>Descomplica QGIS</strong>, este projeto piloto representa:</p>
-                <ul>
-                    <li>Minha jornada inicial no geoprocessamento</li>
-                    <li>Aplicação de técnicas básicas de análise espacial</li>
-                    <li>Visualização de dados socioeconômicos</li>
-                </ul>
-                <p>Será continuamente atualizado conforme avanço nas aulas e aquisição de novas habilidades.</p>
-                <a href="Primeiro_Projeto_Livre.html" class="btn">Acessar Projeto</a>
-            </div>
-        </section>
-    </div>
+        <!-- Projeto 1 -->
+        <div class="project">
+            <h3>Análise de Dados Geográficos: População, IDHM e PIB</h3>
+            <p>Bem-vindo ao meu primeiro projeto de mapeamento e análise de dados geográficos utilizando o <strong>QGIS</strong>! Aqui foi explorada a relação entre indicadores socioeconômicos fundamentais — <strong>População</strong>, <strong>Índice de Desenvolvimento Humano Municipal (IDHM)</strong> e <strong>Produto Interno Bruto (PIB)</strong> — no Brasil.</p>
+            <p>Trata-se de um estudo baseado no curso <strong>Descomplica QGIS</strong>, em andamento. É um projeto piloto que será atualizado conforme o avanço das aulas até sua finalização.</p>
+            <a href="Primeiro_Projeto_Livre.html" class="btn">Acessar</a>
+        </div>
+
+    </section>
+</div>
 
     <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <p>Paulo Patrick Rodrigues da Silva, 2025.</p>
-            <div class="footer">
-                Este projeto é de código aberto sob a 
-                <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
-                Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
-            </div>
-            
-            <div class="ai-credit">
-                <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
-            </div>
+    <footer id="footer">
+        <p>Paulo Patrick Rodrigues da Silva, 2025.</p>
+        <p>
+            Este portfólio é de código aberto sob a 
+            <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
+            Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
+        </p>
+        <div class="ai-credit">
+            <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
         </div>
     </footer>
 
