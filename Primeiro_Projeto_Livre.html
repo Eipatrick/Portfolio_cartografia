@@ -4,139 +4,336 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Análise de Dados Geográficos - Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --neon-green: #00ff9d;
+            --neon-blue: #00e1ff;
+            --neon-purple: #bd00ff;
+            --dark-bg: #0d0221;
+            --darker-bg: #02010a;
+            --cyber-text: #b5b5b5;
+            --cyber-yellow: #f9f002;
+            --map-orange: #ff7b00;
+            --data-red: #ff003c;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Rajdhani', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--cyber-text);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 255, 157, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 225, 255, 0.05) 0%, transparent 20%),
+                linear-gradient(to bottom, transparent 95%, rgba(189, 0, 255, 0.1) 100%);
         }
+
         .container {
             max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            padding: 30px;
+            background: rgba(2, 1, 10, 0.85);
+            border: 1px solid var(--neon-purple);
             border-radius: 8px;
+            box-shadow: 0 0 25px rgba(189, 0, 255, 0.4);
+            position: relative;
+            overflow: hidden;
         }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-green), var(--neon-blue), var(--neon-purple));
+        }
+
+        h1, h2 {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
         h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            color: var(--neon-green);
+            margin-bottom: 25px;
             text-align: center;
+            text-shadow: 0 0 10px var(--neon-green);
+            animation: glitch 3s infinite;
         }
+
         h2 {
-            font-size: 1.8rem;
-            color: #34495e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 5px;
+            font-size: 1.6rem;
+            color: var(--neon-blue);
+            margin-top: 35px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--neon-blue);
+            padding-bottom: 8px;
         }
+
         p {
             font-size: 1.1rem;
-            color: #555;
             margin-bottom: 20px;
+            line-height: 1.8;
         }
+
+        strong {
+            color: var(--neon-green);
+        }
+
         .highlight {
-            color: #e74c3c;
+            color: var(--data-red);
+            font-weight: bold;
+            text-shadow: 0 0 5px var(--data-red);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--neon-purple);
             font-weight: bold;
         }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 1rem;
-            color: #fff;
-            background-color: #3498db;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            margin: 5px;
-        }
-        .btn:hover {
-            background-color: #2980b9;
-        }
-        .btn-blog {
-            background-color: #6b4f3a; /* Marrom médio */
-        }
-        .btn-blog:hover {
-            background-color: #5a4232; /* Marrom médio escuro */
-        }
+
         .contact-panel {
-            background-color: #f1f1f1;
-            padding: 15px;
+            background: rgba(13, 2, 33, 0.7);
+            padding: 20px;
             border-radius: 8px;
-            margin: 20px 0;
-            text-align: center;
+            margin: 25px 0;
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 15px rgba(0, 225, 255, 0.2);
+            position: relative;
+            overflow: hidden;
         }
+
+        .contact-panel::before {
+            content: "ALERTA";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--data-red);
+            color: white;
+            padding: 3px 10px;
+            font-size: 0.8rem;
+            font-family: 'Orbitron', sans-serif;
+            border-bottom-left-radius: 5px;
+        }
+
         .contact-panel p {
             margin: 0;
             font-size: 1rem;
-            color: #555;
         }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: transparent;
+            color: var(--neon-green);
+            border: 1px solid var(--neon-green);
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background: rgba(0, 255, 157, 0.1);
+            box-shadow: 0 0 15px var(--neon-green);
+            transform: translateY(-2px);
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 157, 0.4), transparent);
+            transition: all 0.6s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-blog {
+            color: var(--neon-purple);
+            border-color: var(--neon-purple);
+        }
+
+        .btn-blog:hover {
+            background: rgba(189, 0, 255, 0.1);
+            box-shadow: 0 0 15px var(--neon-purple);
+        }
+
         .footer {
             text-align: center;
             margin-top: 40px;
-            font-size: 0.9rem;
-            color: #777;
+            font-size: 0.9em;
+            color: var(--cyber-text);
+            border-top: 1px solid rgba(0, 225, 255, 0.3);
+            padding-top: 20px;
         }
+
         .license-link {
-            color: #3498db;
+            color: var(--neon-blue);
             text-decoration: none;
+            transition: all 0.3s ease;
         }
+
         .license-link:hover {
-            text-decoration: underline;
+            color: var(--neon-green);
+            text-shadow: 0 0 5px var(--neon-green);
         }
 
-        /* Estilos para a caixa de comentários */
-.comentarios {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
+        /* Animações */
+        @keyframes glitch {
+            0% { text-shadow: 2px 0 var(--neon-blue), -2px 0 var(--neon-purple); }
+            25% { text-shadow: -2px 0 var(--neon-purple), 2px 0 var(--neon-green); }
+            50% { text-shadow: 2px 0 var(--map-orange), -2px 0 var(--cyber-yellow); }
+            75% { text-shadow: -2px 0 var(--cyber-yellow), 2px 0 var(--map-orange); }
+            100% { text-shadow: 2px 0 var(--neon-blue), -2px 0 var(--neon-purple); }
+        }
 
-.comentarios h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-}
+        @keyframes scanlines {
+            from { background-position: 0 0; }
+            to { background-position: 0 10px; }
+        }
 
-.comentarios form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+        /* Efeito de scanlines */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.1) 50%, transparent 50%),
+                linear-gradient(90deg, rgba(0, 225, 255, 0.03), rgba(189, 0, 255, 0.03), rgba(0, 225, 255, 0.03));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            animation: scanlines 2s linear infinite;
+            z-index: 1000;
+        }
 
-.comentarios input, .comentarios textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
+        /* Caixa de comentários cyberpunk */
+        .comentarios {
+            margin: 30px auto;
+            padding: 25px;
+            background: rgba(13, 2, 33, 0.7);
+            border: 1px solid var(--neon-blue);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 225, 255, 0.2);
+        }
 
-.comentarios textarea {
-    resize: vertical;
-    height: 100px;
-}
+        .comentarios h2 {
+            color: var(--neon-purple);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
 
-.comentarios button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
+        .comentarios form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-.comentarios button:hover {
-    background-color: #0056b3;
-}
+        .comentarios input, .comentarios textarea {
+            padding: 12px;
+            background: rgba(13, 2, 33, 0.8);
+            border: 1px solid var(--neon-blue);
+            border-radius: 5px;
+            color: var(--cyber-text);
+            font-family: 'Rajdhani', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .comentarios input:focus, .comentarios textarea:focus {
+            outline: none;
+            border-color: var(--neon-green);
+            box-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .comentarios textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .comentarios button {
+            padding: 12px 24px;
+            background: transparent;
+            color: var(--neon-blue);
+            border: 1px solid var(--neon-blue);
+            border-radius: 5px;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .comentarios button:hover {
+            background: rgba(0, 225, 255, 0.1);
+            box-shadow: 0 0 15px var(--neon-blue);
+            color: var(--neon-green);
+            border-color: var(--neon-green);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            .btn-container {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -146,10 +343,10 @@
         
         <p><strong>Descrição:</strong> Este projeto não segue uma linha acadêmica, trata-se apenas de exercícios realizados livremente para demonstrar os aprendizados no curso <strong class="highlight">DescomplicaQGIS</strong> até então, sendo atualizado no percorrer das aulas.</p>
 
-        <!-- Painel de Contato -->
+        <!-- Painel de Contato Cyberpunk -->
         <div class="contact-panel">
             <p>
-                Infelizmente o mapa web não está disponível no momento, por favor, baixe o Geopackage para visualizar os dados no QGIS ou faça o download do mapa web para visualização em seu navegador, pelo <strong>index.html</strong>. Obrigado!
+                <strong>ATENÇÃO:</strong> O mapa web não está disponível no momento. Baixe o Geopackage para visualizar os dados no QGIS ou faça o download do mapa web para visualização em seu navegador, pelo <strong>index.html</strong>.
             </p>
         </div>
 
@@ -159,24 +356,34 @@
 
         <h2>Recursos Utilizados</h2>
         <ul>
-            <li>QGIS para processamento e análise de dados geográficos.</li>
-            <li>Geopackage para armazenamento e compartilhamento de dados.</li>
-            <li>Leaflet.js para criação de mapas interativos na web.</li>
+            <li><strong>QGIS</strong> para processamento e análise de dados geográficos.</li>
+            <li><strong>Geopackage</strong> para armazenamento e compartilhamento de dados.</li>
+            <li><strong>Leaflet.js</strong> para criação de mapas interativos na web.</li>
         </ul>
 
-                <!-- Botões -->
-                <div>
-                    <a href="https://drive.google.com/file/d/133eq6Sy_UjS6RySqDZbeOD54qGINbeDP/view?usp=sharing" class="btn" download>Baixar Geopackage</a>
-                    <a href="https://drive.google.com/file/d/12dzL3EClY7Zyjola1pxPhUFtjVDffBXW/view" class="btn" download>Baixar Mapa Web</a>
-                    <a href="projetos.html" class="btn btn-blog">Voltar</a>
-                </div>
-                
+        <!-- Botões -->
+        <div class="btn-container">
+            <a href="https://drive.google.com/file/d/133eq6Sy_UjS6RySqDZbeOD54qGINbeDP/view?usp=sharing" class="btn" download>Baixar Geopackage</a>
+            <a href="https://drive.google.com/file/d/12dzL3EClY7Zyjola1pxPhUFtjVDffBXW/view" class="btn" download>Baixar Mapa Web</a>
+            <a href="projetos.html" class="btn btn-blog">Voltar</a>
+        </div>
+
+        <!-- Seção de Comentários -->
+        <div class="comentarios">
+            <h2>Terminal de Feedback</h2>
+            <form>
+                <input type="text" placeholder="Seu identificador" required>
+                <input type="email" placeholder="Código de acesso (opcional)">
+                <textarea placeholder="Insira sua mensagem aqui..." required></textarea>
+                <button type="submit">Transmitir</button>
+            </form>
+        </div>
+
         <div class="footer">
             Este projeto é de código aberto sob a 
             <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
             Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
         </div>
     </div>
-
 </body>
 </html>
