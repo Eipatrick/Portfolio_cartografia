@@ -31,9 +31,11 @@ h1, h2, h3, h4 {
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px; /* Padding mais seguro para mobile */
+    box-sizing: border-box; /* Garante que o padding não some à largura */
 }
 
 /* ===== ANIMAÇÕES ===== */
@@ -163,17 +165,19 @@ header p {
 /* ===== NAVEGAÇÃO ===== */
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centraliza os botões */
     background: rgba(2, 1, 10, 0.9);
     position: sticky;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid var(--neon-purple);
+    padding: 10px 0; /* Espaçamento vertical */
 }
 
 nav a {
     color: var(--neon-blue);
-    padding: 15px 25px;
+    padding: 12px 20px; /* Ajuste de padding */
+    margin: 0 5px; /* Espaçamento entre botões */
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Orbitron', sans-serif;
@@ -203,6 +207,8 @@ nav a::after {
 nav a:hover::after {
     width: 70%;
 }
+
+
 
 /* ===== BOTÕES SOCIAIS ===== */
 #buttons {
@@ -257,9 +263,9 @@ nav a:hover::after {
 }
 
 .sobre-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 50px;
+    display: flex;
+    flex-direction: column; /* Mobile first - empilhado */
+    gap: 30px;
     align-items: center;
 }
 
@@ -655,96 +661,60 @@ footer::before {
     text-align: center;
 }
 
+/* ===== MEDIA QUERIES PARA TELAS MAIORES ===== */
 @media (min-width: 768px) {
-    .sobre-container {
-        grid-template-columns: 1fr 2fr;
-        text-align: left;
-    }
-
-    .article-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-}
-
-@media (min-width: 992px) {
     .container {
-        max-width: 960px;
+        padding: 0 20px;
     }
-}
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
+    #sobre {
+        padding: 60px 0;
     }
-}
 
-/* Ajustando grids */
-.sobre-container, .article-grid, .map-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    text-align: center;
-}
-
-@media (min-width: 768px) {
     .sobre-container {
-        grid-template-columns: 1fr 2fr;
-        text-align: left;
-        align-items: center;
+        flex-direction: row; /* Volta ao layout original em telas maiores */
+        text-align: left; /* Alinha o texto à esquerda */
+        gap: 50px;
+        align-items: flex-start; /* Alinha os itens ao topo */
     }
 
     .sobre-container img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+        margin-right: 40px; /* Espaço entre foto e texto */
     }
 
-    .article-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-}
 
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
+    .sobre-texto h2 {
+        font-size: 2.2rem;
+        text-align: left; /* Alinhamento padrão em desktop */
+    }
+
+    .sobre-texto p {
+        font-size: 1.1rem;
+        text-align: center; /* Alinhamento padrão em desktop */
     }
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
-}
-
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 992px) {
-    .sobre-container {
-        grid-template-columns: 1fr;
-        text-align: center;
+/* ===== AJUSTES GERAIS PARA MOBILE ===== */
+@media (max-width: 767px) {
+    /* Header */
+    header {
+        min-height: 40vh; /* Altura reduzida */
+        padding: 20px;
     }
     
-    .sobre-container img {
-        margin: 0 auto;
-        max-width: 80%;
-    }
-    
-    .map-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
     header h1 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Tamanho reduzido */
     }
     
     header p {
-        font-size: 1.2rem;
+        font-size: 1.1rem; /* Tamanho reduzido */
+        padding: 0 15px; /* Padding para não colar nas bordas */
     }
     
+    /* Navegação */
     nav {
         flex-wrap: wrap;
+        justify-content: space-around;
     }
     
     nav a {
@@ -752,36 +722,13 @@ footer::before {
         font-size: 0.8rem;
     }
     
-    .project h3, .article-card h3 {
-        font-size: 1.5rem;
-    }
-    
-    .article-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-method {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .contact-icon {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-}
-
-@media (max-width: 576px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    header p {
-        font-size: 1rem;
-    }
-    
+    /* Botões sociais */
     #buttons {
         gap: 10px;
+    }
+
+    .sobre-container img {
+        max-width: 220px;
     }
     
     .social-link {
@@ -794,7 +741,41 @@ footer::before {
         height: 20px;
     }
     
-    .contact-container {
-        padding: 20px;
+    /* Seções */
+    section {
+        padding: 40px 0 !important; /* Padding consistente */
+    }
+    
+    h2 {
+        font-size: 1.5rem; /* Tamanho reduzido */
+        padding: 0 15px 10px; /* Padding para não colar nas bordas */
+    }
+    
+    /* Cards */
+    .project, .article-card, .contact-method {
+        padding: 15px 20px; /* Padding reduzido */
+        margin: 0 10px 20px; /* Margem para não colar nas bordas */
+    }
+    
+    /* Contato */
+    .contact-method {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
     }
 }
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes glitch {
+    0% { text-shadow: 1px 0 var(--neon-blue), -1px 0 var(--neon-purple); }
+    25% { text-shadow: -1px 0 var(--neon-purple), 1px 0 var(--neon-green); }
+    50% { text-shadow: 1px 0 var(--map-orange), -1px 0 var(--cyber-yellow); }
+    75% { text-shadow: -1px 0 var(--cyber-yellow), 1px 0 var(--map-orange); }
+    100% { text-shadow: 1px 0 var(--neon-blue), -1px 0 var(--neon-purple); }
+}
+
+/* ... (mantenha o restante do seu CSS existente) ... */
