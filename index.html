@@ -44,6 +44,54 @@
             #buttons img {
                 filter: brightness(1) invert(0);
             }
+
+            /* Media Queries para mobile */
+        @media (max-width: 768px) {
+            header {
+                background-attachment: scroll; /* Remove parallax em mobile */
+                background-position: top center; /* Ajusta posição da imagem */
+            }
+            
+            header h1 {
+                font-size: 2rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            #buttons {
+                gap: 15px;
+                margin-top: 20px;
+            }
+            
+            #buttons img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        /* Ajustes para telas muito pequenas */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            header p {
+                font-size: 0.9rem;
+            }
+            
+            #buttons {
+                gap: 10px;
+            }
+            
+            #buttons img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
         </style>
     </head>
 <body>
