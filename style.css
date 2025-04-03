@@ -112,15 +112,16 @@ footer {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
-/* Botões OpenStreetMap, LinkedIn e GitHub */
+/* Botões OpenStreetMap, LinkedIn, GitHub e Freelancer */
 #buttons {
     margin-top: 10px;
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap; /* Permite que os botões quebrem linha em telas pequenas */
 }
 
-.osm-link, .linkedin-link, .github-link {
+.osm-link, .linkedin-link, .github-link, .freelancer-link {
     width: 40px; /* Largura fixa */
     height: 40px; /* Altura fixa */
     display: flex;
@@ -128,38 +129,49 @@ footer {
     justify-content: center;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease-in-out;
-}
-
-.osm-link {
+    transition: all 0.3s ease-in-out;
     background-color: #8c6b54; /* Marrom mais claro */
 }
 
-.linkedin-link {
-    background-color: #8c6b54; /* Marrom mais claro */
-}
-
-.github-link {
-    background-color: #8c6b54; /* Marrom mais claro */
-}
-
-.osm-link:hover {
-    background-color: #7a5a46; /* Marrom mais claro escuro */
-}
-
-.linkedin-link:hover {
-    background-color: #7a5a46; /* Marrom mais claro escuro */
-}
-
-.github-link:hover {
-    background-color: #7a5a46; /* Marrom mais claro escuro */
+.osm-link:hover, .linkedin-link:hover, 
+.github-link:hover, .freelancer-link:hover {
+    background-color: #7a5a46; /* Marrom mais escuro */
+    transform: translateY(-2px); /* Efeito de levantar */
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo das imagens dentro dos botões */
-.osm-link img, .linkedin-link img, .github-link img {
+.osm-link img, .linkedin-link img, 
+.github-link img, .freelancer-link img {
     width: 24px; /* Tamanho dos ícones */
     height: 24px;
-    filter: brightness(1) invert(0); /* Ícones brancos */
+    filter: brightness(0) invert(1); /* Ícones brancos */
+    transition: transform 0.3s ease;
+}
+
+/* Efeito hover nos ícones */
+.osm-link:hover img, .linkedin-link:hover img,
+.github-link:hover img, .freelancer-link:hover img {
+    transform: scale(1.1);
+}
+
+/* Media Query para mobile */
+@media (max-width: 768px) {
+    #buttons {
+        gap: 8px;
+    }
+    
+    .osm-link, .linkedin-link, 
+    .github-link, .freelancer-link {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .osm-link img, .linkedin-link img,
+    .github-link img, .freelancer-link img {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 /* Responsividade para telas menores */
