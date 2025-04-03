@@ -3,69 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Geográfico</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Favicon -->
+    <title>Paulo Patrick | Geotecnologias & Soluções Geoespaciais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        /* Estilos para o cabeçalho com imagem de fundo */
-        header {
-            position: relative;
-            text-align: center;
-            color: white; /* Cor do texto para contrastar com o fundo */
-            background-image: url(Terra.jpg); /* Caminho da imagem de fundo */
-            background-size: cover; /* Cobrir todo o espaço do cabeçalho */
-            background-position: center; /* Centralizar a imagem */
-            background-repeat: no-repeat; /* Evitar repetição */
-            background-blend-mode: overlay; /* Mesclar a imagem com a cor de fundo */
-            background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura para melhorar a legibilidade */
-        }
-
-        header h1, header p {
-            position: relative;
-            z-index: 1; /* Garantir que o texto fique acima da imagem de fundo */
-        }
-
-        #buttons {
-            position: relative;
-            z-index: 1; /* Garantir que os botões fiquem acima da imagem de fundo */
-            margin-top: 10px;
-        }
-
-        #buttons img {
-            filter: brightness(1) invert(0); /* Tornar os ícones brancos */
-        }
-    </style>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-</head>
-<body>
-    <!-- Selo "IA Friendly" -->
-    <div id="ia-friendly">IA Integrada</div>
+    <link rel="stylesheet" href="style.css">
+    <!-- Selo "IA Integrada" -->
+    <div id="ia-friendly">Feito com IA</div>
 
     <!-- Cabeçalho com imagem de fundo -->
     <header>
-        <h1>Portfólio Geográfico</h1>
-        <p>Bem-vindo ao meu portfólio de projetos focados em geoprocessamento e sensoriamento remoto./p>
-        <p>© Paulo Patrick Rodrigues da Silva</p>
+        <div class="container">
+            <h1>Paulo Patrick</h1>
+            <p>Geotecnologias & Soluções Geoespaciais</p>
+            <p class="copyright">© Paulo Patrick Rodrigues da Silva</p>
 
-        <!-- Botões OpenStreetMap, LinkedIn e GitHub -->
-        <div id="buttons">
-            <div class="osm-link">
-                <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap" width="24" height="24">
+            <!-- Botões sociais -->
+            <div id="buttons">
+                <a href="https://www.openstreetmap.org/user/eipatrick" class="social-link" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap">
                 </a>
-            </div>
-
-            <div class="linkedin-link">
-                <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="24" height="24">
+                <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" class="social-link" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
                 </a>
-            </div>
-
-            <div class="github-link">
-                <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="24" height="24">
+                <a href="https://github.com/Eipatrick/Portfolio_cartografia" class="social-link" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
                 </a>
             </div>
         </div>
@@ -73,88 +36,151 @@
 
     <!-- Menu de Navegação -->
     <nav>
-        <a href="index.html">Início</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="artigos.html">Artigos</a>
-        <a href="contato.html">Contato</a>
+        <div class="container">
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="artigos.html">Artigos</a>
+            <a href="contato.html">Contato</a>
+        </div>
     </nav>
 
-    <!-- Conteúdo Principal -->
-    <div class="container">
-        <!-- Seção Sobre -->
-        <section id="sobre">
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <div class="container">
             <div class="sobre-container">
                 <img src="Foto_Perfil.jpg" alt="Foto de Paulo Patrick">
                 <div class="sobre-texto">
-                    <h2>Sobre Mim</h2>
-                    <p>Olá, meu nome é Paulo Patrick e sou estudante de geografia, também formado em engenharia civil. Busco contribuir com a sociedade fora do escopo capitalista através de análises geoespaciais, sociais, políticas e demais áreas envolventes do meio ambiente, focado na América Latina. O intuito deste portfólio é apresentar meus projetos acompanhados de meus posicionamentos filosóficos e políticos, sem neutralidade, portanto deixo aqui minhas intenções para além da ciência geográfica.</p>
+                    <h2>Formação Multidisciplinar, Visão Integrada</h2>
+                    <p>Bacharel em <span class="highlight">Engenharia Civil</span> e graduando em <span class="highlight">Geografia</span>, combino conhecimentos técnicos e analíticos para desenvolver soluções inovadoras em <span class="highlight">geoprocessamento, sensoriamento remoto e análises socioambientais</span>.</p>
+                    <p>Minha expertise abrange desde a interpretação de dados geoespaciais até a criação de <span class="highlight">mapas dinâmicos e dashboards interativos</span>, sempre com foco na <span class="highlight">sustentabilidade ambiental e eficiência territorial</span>.</p>
+                    <p>Unir <span class="highlight">precisão técnica</span> e <span class="highlight">visão socioambiental</span> para desenvolver ferramentas que otimizem recursos naturais, antecipem riscos ambientais e promovam cidades inteligentes e inclusivas.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <!-- Seção Habilidades -->
+    <section class="skills-section">
         <div class="container">
             <h2>Mural de Habilidades</h2>
             <p>Esta é uma autoavaliação subjetiva, sujeita a revisão conforme avanço nos estudos e projetos.</p>
-            <div class="skill">
-                <div class="skill-name">SIG | QGIS</div>
-                <div class="progress-bar"><div class="progress" data-progress="50">50%</div></div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">Python</div>
-                <div class="progress-bar"><div class="progress" data-progress="10">10%</div></div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">Power BI</div>
-                <div class="progress-bar"><div class="progress" data-progress="5">5%</div></div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">Banco de Dados | SQL</div>
-                <div class="progress-bar"><div class="progress" data-progress="20">20%</div></div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">Sensoriamento Remoto</div>
-                <div class="progress-bar"><div class="progress" data-progress="30">30%</div></div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">Cartografia</div>
-                <div class="progress-bar"><div class="progress" data-progress="40">40%</div></div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">Geoestatística</div>
-                <div class="progress-bar"><div class="progress" data-progress="15">15%</div></div>
+            
+            <div class="skills-container">
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-name">SIG | QGIS</span>
+                        <span class="skill-percent">50%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="50%" style="width: 50%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-percent">10%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="10%" style="width: 10%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-name">Power BI</span>
+                        <span class="skill-percent">5%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="5%" style="width: 5%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-name">Banco de Dados | SQL</span>
+                        <span class="skill-percent">20%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="20%" style="width: 20%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-name">Sensoriamento Remoto</span>
+                        <span class="skill-percent">30%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="30%" style="width: 30%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-name">Cartografia</span>
+                        <span class="skill-percent">40%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="40%" style="width: 40%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-name">Geoestatística</span>
+                        <span class="skill-percent">15%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="15%" style="width: 15%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-name">Inteligência Artifical</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="70%" style="width: 70%;"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </section>
 
-        <section class="banner">
-            <div class="banner-content">
-                <h1 class="animated-title">Minhas Contribuições no OpenStreetMap</h1>
-                <p class="animated-subtitle">Explore minhas edições e descubra como estou ajudando a mapear o mundo!</p>
+    <!-- Seção Mapa -->
+    <section class="map-section">
+        <div class="container">
+            <div class="banner">
+                <h1>Minhas Contribuições no OpenStreetMap</h1>
+                <p>Explore minhas edições e descubra como estou ajudando a mapear o mundo!</p>
             </div>
-        </section>
-
-        <div class="map-container">
-            <!-- Mapa OpenStreetMap -->
-            <div id="map"></div>
-        
-            <!-- Menu de edições -->
-            <div class="edits-menu">
-                <h3>Últimas Edições</h3>
-                <ul id="edits-list"></ul>
+            
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="edits-menu">
+                    <h3>Últimas Edições</h3>
+                    <ul id="edits-list"></ul>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Rodapé -->
-    <footer id="footer">
-        <p>Paulo Patrick Rodrigues da Silva, 2025.</p>
-        <p>
-            Este portfólio é de código aberto sob a 
-            <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
-            Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
-        </p>
-
-        <div class="ai-credit">
-            <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
+    <footer>
+        <div class="container">
+            <p>Paulo Patrick Rodrigues da Silva, 2025.</p>
+            <p>
+                Este portfólio é de código aberto sob a 
+                <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
+                Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os créditos.
+            </p>
+            
+            <div class="ai-credit">
+                <p>Este site foi criado com assistência das IA's DeepSeek e ChatGPT.</p>
+            </div>
         </div>
     </footer>
 
@@ -163,5 +189,15 @@
     <!-- Vinculação ao script.js -->
     <script src="script.js"></script>
     
+    <script>
+        // Animação das barras de progresso
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress');
+            progressBars.forEach(bar => {
+                const width = bar.getAttribute('data-progress');
+                bar.style.width = width;
+            });
+        });
+    </script>
 </body>
 </html>
