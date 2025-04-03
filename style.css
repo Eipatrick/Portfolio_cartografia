@@ -678,6 +678,45 @@ footer::before {
     }
 }
 
+/* Ajustando grids */
+.sobre-container, .article-grid, .map-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .sobre-container {
+        grid-template-columns: 1fr 2fr;
+        text-align: left;
+        align-items: center;
+    }
+
+    .sobre-container img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .article-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 992px) {
     .sobre-container {
@@ -687,6 +726,7 @@ footer::before {
     
     .sobre-container img {
         margin: 0 auto;
+        max-width: 80%;
     }
     
     .map-container {
