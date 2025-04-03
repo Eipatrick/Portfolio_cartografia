@@ -1,52 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Portfólio Geográfico</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        /* Estilos para o cabeçalho com imagem de fundo */
-        header {
-            position: relative;
-            text-align: center;
-            color: white; /* Cor do texto para contrastar com o fundo */
-            background-image: url(Terra.jpg); /* Caminho da imagem de fundo */
-            background-size: cover; /* Cobrir todo o espaço do cabeçalho */
-            background-position: center; /* Centralizar a imagem */
-            background-repeat: no-repeat; /* Evitar repetição */
-            background-blend-mode: overlay; /* Mesclar a imagem com a cor de fundo */
-            background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura para melhorar a legibilidade */
-        }
-
-        header h1, header p {
-            position: relative;
-            z-index: 1; /* Garantir que o texto fique acima da imagem de fundo */
-        }
-
-        #buttons {
-            position: relative;
-            z-index: 1; /* Garantir que os botões fiquem acima da imagem de fundo */
-            margin-top: 10px;
-        }
-
-        #buttons img {
-            filter: brightness(1) invert(0); /* Tornar os ícones brancos */
-        }
-    </style>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-</head>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio Geográfico</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        
+        <style>
+            /* Estilos para o cabeçalho */
+            header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+                background-image: url('Terra.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: rgba(0, 0, 0, 0.5);
+                background-blend-mode: overlay;
+                width: 100hv;
+                height: 100vh;
+            }
+            
+            header h1, header p {
+                margin: 10px 0;
+                position: relative;
+                z-index: 1;
+            }
+    
+            #buttons {
+                position: relative;
+                z-index: 1;
+                margin-top: 20px;
+            }
+    
+            #buttons img {
+                filter: brightness(1) invert(0);
+            }
+        </style>
+    </head>
 <body>
     <!-- Selo "IA Friendly" -->
-    <div id="ia-friendly">IA Integrada</div>
+    <div id="ia-friendly">Feito com IA ♥</div>
 
     <!-- Cabeçalho com imagem de fundo -->
     <header>
         <h1>Portfólio Geográfico</h1>
-        <p>Bem-vindo ao meu portfólio de projetos para a América Latina.</p>
+        <p>Bem-vindo ao meu portfólio de geoprocessamento e sensoriamento remoto.</p>
         <p>Paulo Patrick Rodrigues da Silva</p>
 
         <!-- Botões OpenStreetMap, LinkedIn e GitHub -->
@@ -73,7 +80,7 @@
 
     <!-- Menu de Navegação -->
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">Início</a>
         <a href="projetos.html">Projetos</a>
         <a href="artigos.html">Artigos</a>
         <a href="contato.html">Contato</a>
@@ -87,7 +94,7 @@
                 <img src="Foto_Perfil.jpg" alt="Foto de Paulo Patrick">
                 <div class="sobre-texto">
                     <h2>Sobre Mim</h2>
-                    <p>Olá, meu nome é Paulo Patrick e sou estudante de geografia, também formado em engenharia civil. Busco contribuir com a sociedade fora do escopo capitalista através de análises geoespaciais, sociais, políticas e demais áreas envolventes do meio ambiente, focado na América Latina. O intuito deste portfólio é apresentar meus projetos acompanhados de meus posicionamentos filosóficos e políticos, sem neutralidade, portanto deixo aqui minhas intenções para além da ciência geográfica.</p>
+                    <p>Olá, meu nome é Paulo Patrick. Sou bacharel em Engenharia Civil e estudante de Geografia, com interesse em geoprocessamento, sensoriamento remoto, análises socioambientais e geoespaciais. Busco aplicar e expandir meus conhecimentos na produção de mapas e dashboards, contribuindo para o desenvolvimento ambiental sustentável. Meu objetivo é unir ciência e tecnologia para criar soluções que beneficiem a sociedade, enquanto continuo evoluindo intelectualmente e profissionalmente.</p>
                 </div>
             </div>
         </section>
@@ -97,7 +104,7 @@
             <p>Esta é uma autoavaliação subjetiva, sujeita a revisão conforme avanço nos estudos e projetos.</p>
             <div class="skill">
                 <div class="skill-name">QGIS</div>
-                <div class="progress-bar"><div class="progress" data-progress="35">35%</div></div>
+                <div class="progress-bar"><div class="progress" data-progress="50">50%</div></div>
             </div>
             <div class="skill">
                 <div class="skill-name">Python</div>
@@ -118,6 +125,10 @@
             <div class="skill">
                 <div class="skill-name">Power BI</div>
                 <div class="progress-bar"><div class="progress" data-progress="5">5%</div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Inteligência Artifical</div>
+                <div class="progress-bar"><div class="progress" data-progress="60">60%</div></div>
             </div>
         </div>
 
