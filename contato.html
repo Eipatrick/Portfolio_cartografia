@@ -36,6 +36,82 @@
             #buttons img {
                 filter: brightness(1) invert(0); /* Tornar os ícones brancos */
             }
+
+             /* Estilos para o painel de contato */
+        .contact-panel {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Estilos para o formulário de contato */
+        .contact-form {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            color: #8c6b54;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #8c6b54;
+            outline: none;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #8c6b54;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #7a5a46;
+        }
         </style>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     </head>
@@ -94,6 +170,35 @@
             <a href="https://share.phiz.chat/contact?params=YXBwTGluaz1waGl6c2NoZW1lOi8vdXNlcklkPTEwMDEzOTQ0JmZyb21Vc2VySWQ9MTAwMTM5NDQmc2hhcmVUeXBlPWNvbnRhY3Q=&token=b394e3e7cd7e474a995d1f532e567cfd" target="_blank">clicando aqui</a>.
         </p>
     </div>
+
+        <!-- Formulário de Contato -->
+        <section class="contact-form">
+            <h2>Ou se preferir, pelo formulário abaixo:</h2>
+            <form action="enviar_email.php" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject" name="assunto" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="mensagem" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            </form>
+        </section>
 
 <!-- Rodapé -->
 <footer id="footer">
