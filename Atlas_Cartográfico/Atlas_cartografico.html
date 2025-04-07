@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atlas Ambiental da Lagoa da Pampulha - Paulo Patrick</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 5px;
+    }
+
+    ol {
+      margin-left: 20px;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px 5px 0 0;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 5px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    .btn-blog {
+      background-color: #6b4f3a;
+    }
+
+    .btn-blog:hover {
+      background-color: #5a4232;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    .license-link {
+      color: #3498db;
+    }
+
+    .license-link:hover {
+      text-decoration: underline;
+    }
+
+    .map-image {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      display: none;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-image.active {
+      display: block;
+    }
+
+    .map-controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .map-controls button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 10px;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .map-controls button:hover {
+      background-color: #1a252f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Atlas Cartográfico Ambiental da Lagoa da Pampulha</h1>
+    <p><strong>Autor:</strong> Paulo Patrick Rodrigues da Silva</p>
+    <p><strong>Descrição:</strong> Análise ambiental da Lagoa da Pampulha com o uso de sensoriamento remoto e QGIS, explorando índices espectrais (NDWI, NDVI, OMI), mapas térmicos (LST) e aspectos ambientais, urbanos e ecológicos.</p>
+
+    <h2>Sumário</h2>
+    <ol>
+      <li>Introdução</li>
+      <li>Objetivo Geral</li>
+      <li>Metodologia
+        <ol>
+          <li>Correções e Processamento das Imagens</li>
+          <li>Cálculo dos Índices Espectrais</li>
+          <li>Mapas Térmicos (LST – Land Surface Temperature)</li>
+          <li>Composição Cartográfica</li>
+        </ol>
+      </li>
+      <li>Resultados
+        <ol>
+          <li>Mapa de Contexto</li>
+          <li>Mapa NDWI</li>
+          <li>Mapa NDVI</li>
+          <li>Mapa de Localização da Lagoa da Pampulha</li>
+          <li>Mapa da Bacia Hidrográfica do Ribeirão do Onça</li>
+          <li>Mapa OMI</li>
+          <li>Mapa de Poluição e Turbidez</li>
+          <li>Mapas de Temperatura da Superfície (LST)</li>
+        </ol>
+      </li>
+      <li>Considerações Finais</li>
+    </ol>
+
+    <h2>Mapas Produzidos</h2>
+    <img src="Lagoa_da_Pampulha_CBERS.png" class="map-image active" alt="Mapa de Contexto" />
+    <img src="Mapa_índice_NDWI.png" class="map-image" alt="Mapa NDWI" />
+    <img src="Mapa_índice_NDVI.png" class="map-image" alt="Mapa NDVI" />
+    <img src="Mapa_Localização_Lagoa_Pampulha.png" class="map-image" alt="Mapa de Localização da Lagoa" />
+    <img src="Mapa_Localização_Bacia_Hidro_Rib_Onça.png" class="map-image" alt="Mapa da Bacia Hidrográfica" />
+    <img src="Mapa_materia_organica.png" class="map-image" alt="Mapa OMI" />
+    <img src="Mapa_turbidez_poluição_lagoa.png" class="map-image" alt="Mapa de Poluição e Turbidez" />
+    <img src="Mapa_temperatura_03.03.25.png" class="map-image" alt="LST 03-03-2025" />
+    <img src="Mapa_temperatura_11.03.25.png" class="map-image" alt="LST 11-03-2025" />
+    <img src="Mapa_temperatura_27.03.25.png" class="map-image" alt="LST 27-03-2025" />
+
+    <div class="map-controls">
+      <button onclick="mudarMapa(-1)">Anterior</button>
+      <button onclick="mudarMapa(1)">Próximo</button>
+    </div>
+
+    <h2>Recursos e Links</h2>
+    <a href="https://drive.google.com/file/d/1jMcYxuQyAYjVNjmQZXZszsvEFvWWSpOn/view?usp=sharing" class="btn" target="_blank">Download do Atlas em PDF</a>
+    <a href="https://drive.google.com/file/d/1TMKO5BbK-Rithju4QgTezoN2cs8q4rRj/view?usp=sharing" class="btn" target="_blank">Baixar Geopackage</a>
+    <a href="../projetos.html" class="btn btn-blog">Voltar</a>
+
+    <div class="footer">
+      Este projeto é de código aberto sob a 
+      <a href="license.md" target="_blank" class="license-link">licença GNU GPL v3</a>. 
+      Você pode usar e compartilhar todas as informações sem fins lucrativos, desde que dê os devidos créditos.
+    </div>
+  </div>
+
+  <script>
+    let indiceMapa = 0;
+    const mapas = document.querySelectorAll('.map-image');
+
+    function mudarMapa(direcao) {
+      mapas[indiceMapa].classList.remove('active');
+      indiceMapa = (indiceMapa + direcao + mapas.length) % mapas.length;
+      mapas[indiceMapa].classList.add('active');
+    }
+  </script>
+</body>
+</html>
