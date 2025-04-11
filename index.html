@@ -88,50 +88,61 @@
                 margin-left: 5px;
             }
         
-            /* Media Queries para mobile */
-            @media (max-width: 768px) {
-                header h1 {
-                    font-size: 2rem;
-                    margin-bottom: 0.8rem;
-                }
-        
-                header p {
-                    font-size: 1rem;
-                }
-        
-                #buttons {
-                    gap: 15px;
-                    margin-top: 20px;
-                }
-        
-                #buttons img {
-                    width: 35px;
-                    height: 35px;
-                }
-            }
-        
-            @media (max-width: 480px) {
-                header{
-                width: 90vw;
-                height: 90vh;
-                }
-                header h1 {
-                    font-size: 1.8rem;
-                }
-        
-                header p {
-                    font-size: 0.9rem;
-                }
-        
-                #buttons {
-                    gap: 10px;
-                }
-        
-                #buttons img {
-                    width: 30px;
-                    height: 30px;
-                }
-            }
+/* Media Queries para dispositivos menores */
+@media (max-width: 768px) {
+    header {
+        width: 100vw;
+        height: auto;
+        padding: 40px 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    #buttons {
+        gap: 15px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    #buttons img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        width: 100vw;
+        height: auto;
+        padding: 30px 8px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    #buttons {
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    #buttons img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
         </style>
         
     </head>
