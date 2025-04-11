@@ -1,351 +1,348 @@
-/* Reset e estilos gerais */
-* {
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f1e8;
-    color: #4a3f35;
+    background-color: #f5f1e8; /* Bege claro */
+    color: #4a3f35; /* Marrom escuro */
+    height: 100%;
+    padding-bottom: 0; /* Ajuste para que o rodapé não sobreponha o conteúdo */
     text-align: center;
-    height: 100%;
-  }
-  
-  body p {
-    margin: 10px 0;
-  }
-  
-  /* Cabeçalho padrão reutilizável */
-  header {
-    position: relative;
-    color: #f5f1e8;
-    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #245526; /* Verde médio */
+    color: #f5f1e8; /* Bege claro */
+    padding: 50px;
     text-align: center;
-    overflow: hidden;
-    height: 95.5vh;
-  }
-  
-  #video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
-  
-  header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(20, 20, 20, 0.226);
-    z-index: 0;
-  }
-  
-  header h1, header p, #buttons {
-    position: relative;
-    z-index: 1;
-  }
-  
-  #buttons {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  #buttons img {
-    width: 30px;
-    height: 30px;
-    filter: brightness(1) invert(0);
-    transition: transform 0.2s;
-  }
-  #buttons img:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Menu de navegação */
-  nav {
+}
+
+        /* Estilos foto */
+        .sobre-container {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Espaço entre a imagem e o texto */
+        }
+
+        .sobre-container img {
+            width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: auto;
+            border-radius: 50%; /* Para uma imagem redonda */
+            border: 3px solid #ccc; /* Borda opcional */
+        }
+
+        .sobre-texto {
+            flex: 1;
+        }
+
+/* Menu de navegação */
+nav {
     display: flex;
     justify-content: center;
-    background-color: #4a3f35;
-  }
-  
-  nav a {
-    color: #f5f1e8;
+    background-color: #4a3f35; /* Marrom escuro */
+}
+
+nav a {
+    color: #f5f1e8; /* Bege claro */
     padding: 14px 20px;
     text-decoration: none;
-  }
-  nav a:hover {
-    background-color: #6b4f3a;
-  }
-  
-  /* Contêiner principal */
-  .container {
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #6b4f3a; /* Marrom médio */
+}
+
+/* Conteúdo principal */
+.container {
     width: 90%;
-    margin: 20px auto;
+    max-width: none;
+    margin: auto;
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Projetos e artigos */
-  .project, .article {
-    background: #fff;
+}
+
+/* Projetos e artigos */
+.project, .article {
+    background-color: #ffffff; /* Branco */
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  .project img {
+}
+
+.project img {
     max-width: 100%;
     border-radius: 8px;
-  }
-  
-  .video-container {
+}
+
+/* Rodapé */
+footer {
+    background-color: #4a3f35; /* Marrom escuro */
+    color: #f5f1e8; /* Bege claro */
+    text-align: center;
+    padding: 8px 0; /* Reduzi o padding */
+    font-size: 14px; /* Tamanho da fonte reduzido */
     position: relative;
-    max-width: 90%;
-    margin: 0 auto;
-    border: none;
-    overflow: hidden;
-  }
-  
-  .video-container video {
     width: 100%;
-    height: auto;
-    display: block;
-    border: none;
-  }
-  
-  .video-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #f5f1e8;
-    font-size: 1.2rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-    z-index: 2;
-    text-align: center;
-    padding: 10px 20px;
-  }
-  
-  /* Rodapé */
-  footer {
-    background-color: #4a3f35;
-    color: #f5f1e8;
-    text-align: center;
-    padding: 8px 0;
-    font-size: 14px;
-    position: relative;
     bottom: 0;
-    width: 100%;
-    margin-top: auto;
     z-index: 1000;
-  }
-  
-  .ai-credit, .license-link {
+    margin-top: auto; /* Garante que o rodapé fique no final da página */
+}
+
+/* Créditos de IA */
+.ai-credit {
     font-size: 12px;
-    color: #a89f94;
-  }
-  .license-link {
-    font-weight: bold;
-    text-decoration: none;
-  }
-  .license-link:hover {
-    text-decoration: underline;
-  }
-  
-  /* Sobre mim */
-  .sobre-container {
+    color: #a89f94; /* Marrom claro */
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Estilo do link da licença */
+.license-link {
+    color: #a89f94; /* Marrom claro */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Opcional: deixa o texto em negrito */
+}
+
+.license-link:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Botões OpenStreetMap, LinkedIn, GitHub e Freelancer */
+#buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Permite que os botões quebrem linha em telas pequenas */
+}
+
+.osm-link, .linkedin-link, .github-link, .freelancer-link {
+    width: 40px; /* Largura fixa */
+    height: 40px; /* Altura fixa */
     display: flex;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 15px;
-  }
-  .sobre-container img {
-    width: 150px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-  }
-  .sobre-texto {
-    flex: 1;
-    text-align: left;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    body {
-      font-size: 16px;
-      padding: 0 10px;
-    }
-  
-    header {
-      height: 85vh;
-    }
-  
-    header h1 {
-      font-size: 1.5rem;
-      padding: 0 10px;
-    }
-  
-    header p {
-      font-size: 1rem;
-      padding: 0 15px;
-    }
-  
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    background-color: #8c6b54; /* Marrom mais claro */
+}
+
+.osm-link:hover, .linkedin-link:hover, 
+.github-link:hover, .freelancer-link:hover {
+    background-color: #7a5a46; /* Marrom mais escuro */
+    transform: translateY(-2px); /* Efeito de levantar */
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo das imagens dentro dos botões */
+.osm-link img, .linkedin-link img, 
+.github-link img, .freelancer-link img {
+    width: 24px; /* Tamanho dos ícones */
+    height: 24px;
+    filter: brightness(0) invert(1); /* Ícones brancos */
+    transition: transform 0.3s ease;
+}
+
+/* Efeito hover nos ícones */
+.osm-link:hover img, .linkedin-link:hover img,
+.github-link:hover img, .freelancer-link:hover img {
+    transform: scale(1.1);
+}
+
+/* Media Query para mobile */
+@media (max-width: 768px) {
     #buttons {
-      gap: 10px;
-      flex-wrap: wrap;
+        gap: 8px;
     }
-  
-    #buttons img {
-      width: 28px;
-      height: 28px;
+    
+    .osm-link, .linkedin-link, 
+    .github-link, .freelancer-link {
+        width: 36px;
+        height: 36px;
     }
-  
-    .container {
-      width: 100%;
-      padding: 15px;
+    
+    .osm-link img, .linkedin-link img,
+    .github-link img, .freelancer-link img {
+        width: 20px;
+        height: 20px;
     }
-  
-    .sobre-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    /* Ajuste dos botões */
+    #buttons {
+        gap: 8px;
     }
-  
-    .sobre-container img {
-      width: 100px;
+
+    .osm-link, .linkedin-link, .github-link {
+        width: 36px; /* Reduz o tamanho dos botões em telas menores */
+        height: 36px;
     }
-  
-    .sobre-texto {
-      text-align: center;
-      padding: 0 10px;
+
+    .osm-link img, .linkedin-link img, .github-link img {
+        width: 20px; /* Reduz o tamanho dos ícones em telas menores */
+        height: 20px;
     }
-  
-    .video-title {
-      font-size: 1rem;
-      padding: 8px 12px;
-    }
-  
-    .map-container {
-      flex-direction: column;
-    }
-  
-    #map {
-      height: 300px;
-    }
-  
-    .edits-menu {
-      max-height: none;
-    }
-  }
-  
-  /* Mapa e painel de edições */
-  .map-container {
+}
+
+/* Contêiner do mapa e menu */
+.map-container {
     display: flex;
     gap: 20px;
     margin: 20px 0;
-  }
-  #map {
+}
+
+/* Estilo do mapa */
+#map {
     flex: 2;
     height: 500px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  .edits-menu {
+}
+
+/* Estilo do menu de edições */
+.edits-menu {
     flex: 1;
-    background-color: #f5f1e8;
-    border: 1px solid #d4c8b8;
+    background-color: #f5f1e8; /* Bege claro */
+    border: 1px solid #d4c8b8; /* Marrom claro */
     border-radius: 8px;
     padding: 20px;
     max-height: 500px;
     overflow-y: auto;
-    text-align: left;
-  }
-  .edits-menu h3 {
+}
+
+.edits-menu h3 {
+    margin-top: 0;
     font-size: 18px;
-    color: #4a3f35;
-  }
-  #edits-list {
-    list-style: none;
+    color: #4a3f35; /* Marrom escuro */
+}
+
+#edits-list {
+    list-style-type: none;
     padding: 0;
-  }
-  #edits-list li {
+}
+
+#edits-list li {
     margin-bottom: 10px;
     font-size: 14px;
-  }
-  #edits-list li a {
-    color: #6b4f3a;
+    color: #4a3f35; /* Marrom escuro */
+}
+
+#edits-list li a {
+    color: #6b4f3a; /* Marrom médio */
     text-decoration: none;
-  }
-  #edits-list li a:hover {
+}
+
+#edits-list li a:hover {
     text-decoration: underline;
-  }
-  
-  /* Painel de contato */
-  .contact-panel {
-    background-color: #f5f1e8;
-    border: 1px solid #d4c8b8;
+}
+
+/* Painel de contato */
+.contact-panel {
+    background-color: #f5f1e8; /* Bege claro */
+    border: 1px solid #d4c8b8; /* Marrom claro */
     border-radius: 8px;
     padding: 20px;
     margin: 20px 0;
-    color: #4a3f35;
     text-align: center;
-  }
-  .contact-panel a {
-    color: #6b4f3a;
+    font-size: 16px;
+    color: #4a3f35; /* Marrom escuro */
+}
+
+/* Links dentro do painel */
+.contact-panel a {
+    color: #6b4f3a; /* Marrom médio */
     text-decoration: none;
     font-weight: bold;
-  }
-  .contact-panel a:hover {
+}
+
+.contact-panel a:hover {
     text-decoration: underline;
-  }
-  
-  /* Selo IA Friendly */
-  #ia-friendly {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #fff5;
-    padding: 5px 10px;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    z-index: 1000;
-  }
-  
-  /* Habilidades */
-  .skill {
+}
+
+/* Estilo para o selo "IA Friendly" */
+#ia-friendly {
+    position: fixed; /* Fixa o selo na tela */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    opacity: 0.7; /* Transparência */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    background-color: #6b4f3a; /* Marrom médio */
+    color: #f5f1e8; /* Bege claro */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilos para a seção de habilidades */
+.skill {
     margin: 15px 0;
     text-align: left;
-  }
-  .skill-name {
+}
+
+.skill-name {
     font-weight: bold;
     margin-bottom: 5px;
-  }
-  .progress-bar {
+}
+
+.progress-bar {
     width: 100%;
     background: #ddd;
     border-radius: 5px;
     overflow: hidden;
-  }
-  .progress {
+}
+
+.progress {
     height: 20px;
-    background: #6b4f3a;
+    background: #6b4f3a; /* Marrom médio */
     width: 0;
     text-align: right;
     line-height: 20px;
     color: white;
     padding-right: 5px;
-  }
-  
+}
+
+/* Estilos gerais para a seção "Sobre Mim" */
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre a foto e o texto */
+    margin-bottom: 15px; /* Espaço abaixo do contêiner */
+}
+
+.sobre-container img {
+    width: 150px; /* Tamanho da foto */
+    height: auto;
+    border-radius: 50%; /* Foto redonda */
+    border: 2px solid #ccc; /* Borda opcional */
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+/* Estilos para dispositivos móveis (telas menores que 768px) */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column; /* Coloca a foto acima do texto */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .sobre-container img {
+        width: 120px; /* Reduz o tamanho da foto */
+        margin-bottom: 15px; /* Espaço entre a foto e o texto */
+    }
+
+    .sobre-texto {
+        width: 100%; /* Ocupa a largura total */
+    }
+}

@@ -8,6 +8,35 @@
     
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style>
+            /* Estilos para o cabeçalho com imagem de fundo */
+            header {
+                position: relative;
+                text-align: center;
+                color: white; /* Cor do texto para contrastar com o fundo */
+                background-image: url(Terra.jpg); /* Caminho da imagem de fundo */
+                background-size: cover; /* Cobrir todo o espaço do cabeçalho */
+                background-position: center; /* Centralizar a imagem */
+                background-repeat: no-repeat; /* Evitar repetição */
+                background-blend-mode: overlay; /* Mesclar a imagem com a cor de fundo */
+                background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura para melhorar a legibilidade */
+            }
+    
+            header h1, header p {
+                position: relative;
+                z-index: 1; /* Garantir que o texto fique acima da imagem de fundo */
+            }
+    
+            #buttons {
+                position: relative;
+                z-index: 1; /* Garantir que os botões fiquem acima da imagem de fundo */
+                margin-top: 10px;
+            }
+    
+            #buttons img {
+                filter: brightness(1) invert(0); /* Tornar os ícones brancos */
+            }
+        </style>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     </head>
 <body>
@@ -16,46 +45,37 @@
 
     <!-- Cabeçalho -->
     <header>
-        <div class="video-container">
-          <video autoplay muted loop>
-            <source src="satelite_orbita.mp4" type="video/mp4">
-            Seu navegador não suporta vídeo em HTML5.
-          </video>
-      
-          <div class="video-title">
-            <h1>Portfólio Cartográfico</h1>
-            <p>Bem-vindo ao meu portfólio de geoprocessamento e sensoriamento remoto.</p>
-            <p>Paulo Patrick Rodrigues da Silva</p>
-      
-            <!-- Botões OpenStreetMap, LinkedIn, GitHub e Freelancer -->
-            <div id="buttons">
-              <div class="osm-link">
-                <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank" rel="noopener noreferrer">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap">
-                </a>
-              </div>
-      
-              <div class="linkedin-link">
-                <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank" rel="noopener noreferrer">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-                </a>
-              </div>
-      
-              <div class="github-link">
-                <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank" rel="noopener noreferrer">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
-                </a>
-              </div>
-      
-              <div class="freelancer-link">
-                <a href="https://www.br.freelancer.com/u/eipatrick" target="_blank" rel="noopener noreferrer">
-                  <img src="pngwing.com.png" alt="Freelancer.com">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+        <h1>Portfólio Cartográfico</h1>
+        <p>Bem-vindo ao meu portfólio de geoprocessamento e sensoriamento remoto.</p>
+        <p>Paulo Patrick Rodrigues da Silva</p>
+
+<!-- Botões OpenStreetMap, LinkedIn, GitHub e Freelancer -->
+<div id="buttons">
+    <div class="osm-link">
+        <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap">
+        </a>
+    </div>
+
+    <div class="linkedin-link">
+        <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+        </a>
+    </div>
+
+    <div class="github-link">
+        <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+        </a>
+    </div>
+
+    <div class="freelancer-link">
+        <a href="https://www.br.freelancer.com/u/eipatrick" target="_blank" rel="noopener noreferrer">
+            <img src="pngwing.com.png" alt="Freelancer.com">
+        </a>
+    </div>
+</div>
+    </header>
 
     <!-- Menu de Navegação -->
     <nav>
@@ -69,18 +89,16 @@
 <div class="container">
     <!-- Seção Projetos -->
     <section id="projetos">
-
         <h2>Projetos</h2>
+                <!-- Projeto 2 - Atlas Cartográfico Ambiental da Lagoa da Pampulha -->
+                <div class="project">
+                    <h3>Atlas Cartográfico Ambiental da Lagoa da Pampulha</h3>
+                    <p>Este é um Atlas Cartográfico Ambiental da Lagoa da Pampulha, que visa apresentar uma análise ambiental utilizando técnicas de sensoriamento remoto e QGIS. O projeto explora índices espectrais (NDWI, NDVI, OMI), mapas térmicos (LST) e aspectos ambientais, urbanos e ecológicos.</p>
+                    <p>Não é um trabalho acadêmico, o intuito é apresentar habilidades com geotecnologias, geoprocessamento e sensoriamento remoto.</p>
+                    <a href="Atlas_Cartográfico/Atlas_cartografico.html" class="btn">Acessar</a>
+                </div>
 
-        <!-- Projeto 2 - Desafio Imobiliário -->
-        <div class="project">
-            <h3>Atlas Cartográfico Ambiental da Lagoa da Pampulha </h3>
-            <p> Este é um Atlas Cartográfico Ambiental da Lagoa da Pampulha, que visa apresentar uma análise ambiental utilizando técnicas de sensoriamento remoto e QGIS. O projeto explora índices espectrais (NDWI, NDVI, OMI), mapas térmicos (LST) e aspectos ambientais, urbanos e ecológicos.</p>
-            <p>Não é um trabalho acadêmico, o intuito é apresentar habilidades com geotecnologias, geoprocessamento e sensoriamento remoto.</p>
-            <a href="Atlas_Cartográfico/Atlas_cartografico.html" class="btn">Acessar</a>
-        </div>
-
-        <!-- Projeto 2 - Desafio Imobiliário -->
+        <!-- Projeto 1 - Desafio Imobiliário -->
         <div class="project">
             <h3>Desafio Imobiliário: Mapeamento Urbanístico em São Paulo</h3>
             <p>Este projeto consiste em um mapeamento urbanístico para determinação de áreas estratégicas em São Paulo, visando investimento imobiliário. O cliente solicitou uma análise com base em critérios específicos, como proximidade de estações de metrô, afastamento de áreas de risco e densidade populacional.</p>

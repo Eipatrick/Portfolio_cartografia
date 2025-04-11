@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <!DOCTYPE html>
+    <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +9,90 @@
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
         
+        <style>
+            /* Estilos para o cabeçalho */
+            header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+                background-image: url('Terra.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: rgba(0, 0, 0, 0.5);
+                background-blend-mode: overlay;
+                width: 100hv;
+                height: 90vh;
+            }
+            
+            header h1, header p {
+                margin: 10px 0;
+                position: relative;
+                z-index: 1;
+            }
+    
+            #buttons {
+                position: relative;
+                z-index: 1;
+                margin-top: 20px;
+            }
+    
+            #buttons img {
+                filter: brightness(1) invert(0);
+            }
+
+            /* Media Queries para mobile */
+        @media (max-width: 768px) {
+            header {
+                background-attachment: scroll; /* Remove parallax em mobile */
+                background-position: top center; /* Ajusta posição da imagem */
+            }
+            
+            header h1 {
+                font-size: 2rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            #buttons {
+                gap: 15px;
+                margin-top: 20px;
+            }
+            
+            #buttons img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        /* Ajustes para telas muito pequenas */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            header p {
+                font-size: 0.9rem;
+            }
+            
+            #buttons {
+                gap: 10px;
+            }
+            
+            #buttons img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        </style>
     </head>
 <body>
     <!-- Selo "IA Friendly" -->
@@ -16,47 +100,37 @@
 
     <!-- Cabeçalho com imagem de fundo -->
     <header>
-        <div class="video-container">
-          <video autoplay muted loop>
-            <source src="satelite_orbita.mp4" type="video/mp4">
-            Seu navegador não suporta vídeo em HTML5.
-          </video>
-      
-          <div class="video-title">
-            <h1>Portfólio Cartográfico</h1>
-            <p>Bem-vindo ao meu portfólio de geoprocessamento e sensoriamento remoto.</p>
-            <p>Paulo Patrick Rodrigues da Silva</p>
-      
-            <!-- Botões OpenStreetMap, LinkedIn, GitHub e Freelancer -->
-            <div id="buttons">
-              <div class="osm-link">
-                <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank" rel="noopener noreferrer">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap">
-                </a>
-              </div>
-      
-              <div class="linkedin-link">
-                <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank" rel="noopener noreferrer">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-                </a>
-              </div>
-      
-              <div class="github-link">
-                <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank" rel="noopener noreferrer">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
-                </a>
-              </div>
-      
-              <div class="freelancer-link">
-                <a href="https://www.br.freelancer.com/u/eipatrick" target="_blank" rel="noopener noreferrer">
-                  <img src="pngwing.com.png" alt="Freelancer.com">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      
+        <h1>Portfólio Cartográfico</h1>
+        <p>Bem-vindo ao meu portfólio de geoprocessamento e sensoriamento remoto.</p>
+        <p>Paulo Patrick Rodrigues da Silva</p>
+
+<!-- Botões OpenStreetMap, LinkedIn, GitHub e Freelancer -->
+<div id="buttons">
+    <div class="osm-link">
+        <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap">
+        </a>
+    </div>
+
+    <div class="linkedin-link">
+        <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+        </a>
+    </div>
+
+    <div class="github-link">
+        <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+        </a>
+    </div>
+
+    <div class="freelancer-link">
+        <a href="https://www.br.freelancer.com/u/eipatrick" target="_blank" rel="noopener noreferrer">
+            <img src="pngwing.com.png" alt="Freelancer.com">
+        </a>
+    </div>
+</div>
+    </header>
 
     <!-- Menu de Navegação -->
     <nav>
@@ -78,7 +152,7 @@
                 </div>
             </div>
         </section>
-        <div class="skills-container">
+
         <div class="container">
             <h2>Mural de Habilidades</h2>
             <p>Esta é uma autoavaliação subjetiva, sujeita a revisão conforme avanço nos estudos e projetos.</p>
@@ -92,8 +166,8 @@
             </div>
             <div class="skill">
                 <div class="skill-name">Python</div>
-                <div class="progress-bar"><div class="progress" data-progress="20">20%</div></div>
-            </div>            
+                <div class="progress-bar"><div class="progress" data-progress="10">10%</div></div>
+            </div>
             <div class="skill">
                 <div class="skill-name">Sensoriamento Remoto</div>
                 <div class="progress-bar"><div class="progress" data-progress="30">30%</div></div>
@@ -114,7 +188,6 @@
                 <div class="skill-name">Inteligência Artifical</div>
                 <div class="progress-bar"><div class="progress" data-progress="60">60%</div></div>
             </div>
-        </div>
         </div>
 
         <section class="banner">
