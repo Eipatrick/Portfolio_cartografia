@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <!DOCTYPE html>
-    <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,90 +7,129 @@
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-        
+    
         <style>
             /* Estilos para o cabeçalho */
             header {
+                position: relative;
+                width: 94vw;
+                height: 90vh;
+                overflow: hidden;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
                 color: white;
-                background-image: url('Terra.jpg');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-color: rgba(0, 0, 0, 0.5);
-                background-blend-mode: overlay;
-                width: 100hv;
-                height: 90vh;
             }
-            
-            header h1, header p {
-                margin: 10px 0;
+        
+            #video-background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 0;
+            }
+        
+            header h1, header p, #buttons {
                 position: relative;
                 z-index: 1;
             }
-    
+        
             #buttons {
-                position: relative;
-                z-index: 1;
                 margin-top: 20px;
             }
-    
+        
             #buttons img {
                 filter: brightness(1) invert(0);
             }
-
-            /* Media Queries para mobile */
-        @media (max-width: 768px) {
-            header {
-                background-attachment: scroll; /* Remove parallax em mobile */
-                background-position: top center; /* Ajusta posição da imagem */
+        
+            /* Estilos para a seção de skills */
+            .skill {
+                margin-bottom: 1rem;
             }
-            
-            header h1 {
-                font-size: 2rem;
-                margin-bottom: 0.8rem;
+        
+            .skill-name {
+                font-weight: bold;
+                margin-bottom: 5px;
             }
-            
-            header p {
-                font-size: 1rem;
+        
+            .progress-bar {
+                position: relative;
+                background-color: #ddd;
+                height: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+                width: 100%;
+                display: flex;
             }
-            
-            #buttons {
-                gap: 15px;
-                margin-top: 20px;
+        
+            .progress {
+                height: 100%;
+                line-height: 20px;
+                color: white;
+                text-align: center;
+                font-size: 12px;
             }
-            
-            #buttons img {
-                width: 35px;
-                height: 35px;
+        
+            .progress.manual {
+                background-color:  #463529; 
             }
-        }
-
-        /* Ajustes para telas muito pequenas */
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.8rem;
+        
+            .progress.ai {
+                background-color: #6B4F3A; 
             }
-            
-            header p {
+        
+            .total {
                 font-size: 0.9rem;
+                color: #555;
+                margin-left: 5px;
             }
-            
-            #buttons {
-                gap: 10px;
+        
+            /* Media Queries para mobile */
+            @media (max-width: 768px) {
+                header h1 {
+                    font-size: 2rem;
+                    margin-bottom: 0.8rem;
+                }
+        
+                header p {
+                    font-size: 1rem;
+                }
+        
+                #buttons {
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+        
+                #buttons img {
+                    width: 35px;
+                    height: 35px;
+                }
             }
-            
-            #buttons img {
-                width: 30px;
-                height: 30px;
+        
+            @media (max-width: 480px) {
+                header h1 {
+                    font-size: 1.8rem;
+                }
+        
+                header p {
+                    font-size: 0.9rem;
+                }
+        
+                #buttons {
+                    gap: 10px;
+                }
+        
+                #buttons img {
+                    width: 30px;
+                    height: 30px;
+                }
             }
-        }
-
         </style>
+        
     </head>
 <body>
     <!-- Selo "IA Friendly" -->
@@ -100,6 +137,10 @@
 
     <!-- Cabeçalho com imagem de fundo -->
     <header>
+        <video autoplay muted loop id="video-background">
+            <source src="satelite_orbita.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo em HTML5.
+        </video>
         <h1>Portfólio Cartográfico</h1>
         <p>Bem-vindo ao meu portfólio de geoprocessamento e sensoriamento remoto.</p>
         <p>Paulo Patrick Rodrigues da Silva</p>
@@ -165,9 +206,13 @@
                 <div class="progress-bar"><div class="progress" data-progress="30">30%</div></div>
             </div>
             <div class="skill">
-                <div class="skill-name">Python</div>
-                <div class="progress-bar"><div class="progress" data-progress="10">10%</div></div>
+                <div class="skill-name">Python <span class="total"></span></div>
+                <div class="progress-bar">
+                    <div class="progress manual" style="width: 10%;">10%</div>
+                    <div class="progress ai" style="width: 30%;">+30% com ajuda de IA</div>
+                </div>
             </div>
+            
             <div class="skill">
                 <div class="skill-name">Sensoriamento Remoto</div>
                 <div class="progress-bar"><div class="progress" data-progress="30">30%</div></div>
