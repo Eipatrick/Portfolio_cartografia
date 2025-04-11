@@ -7,157 +7,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    
-        <style>
-            /* Estilos para o cabeçalho */
-            header {
-                position: relative;
-                width: 94vw;
-                height: 90vh;
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                color: rgb(255, 255, 255); /* Cor do texto para contrastar com o fundo */
-            }
-        
-            #video-background {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                z-index: 0;
-            }
-        
-            header h1, header p, #buttons {
-                position: relative;
-                z-index: 1;
-            }
-        
-            #buttons {
-                margin-top: 20px;
-            }
-        
-            #buttons img {
-                filter: brightness(1) invert(0);
-            }
-        
-            /* Estilos para a seção de skills */
-            .skill {
-                margin-bottom: 1rem;
-            }
-            /* Container do mural de habilidades */
-        .skills-container {
-            border: 2px solid #6B4F3A; /* Cor marrom destacada */
-            padding: 20px;
-            border-radius: 12px;
-            background-color: rgba(255, 255, 255, 0.05); /* opcional: fundo levemente visível */
-            backdrop-filter: blur(5px); /* opcional: efeito fosco */
-            margin: 40px auto;
-            width: 90%;
-            max-width: 100%;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3); /* leve sombra para destaque */
-}
 
-            
-        
-            .skill-name {
-                font-weight: bold;
-                margin-bottom: 5px;
-            }
-        
-            .progress-bar {
-                position: relative;
-                background-color: #ddd;
-                height: 20px;
-                border-radius: 10px;
-                overflow: hidden;
-                width: 100%;
-                display: flex;
-            }
-        
-            .progress {
-                height: 100%;
-                line-height: 20px;
-                color: white;
-                text-align: center;
-                font-size: 12px;
-            }
-        
-            .progress.manual {
-                background-color:  #463529; 
-            }
-        
-            .progress.ai {
-                background-color: #6B4F3A; 
-            }
-        
-            .total {
-                font-size: 0.9rem;
-                color: #555;
-                margin-left: 5px;
-            }
-        
-/* Media Queries para dispositivos menores */
-@media (max-width: 768px) {
-    header {
-        width: 95.5vw;
-        height: auto;
-        padding: 40px 10px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-        margin-bottom: 0.8rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    #buttons {
-        gap: 15px;
-        margin-top: 20px;
-        flex-wrap: wrap;
-    }
-
-    #buttons img {
-        width: 35px;
-        height: 35px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        width: 95.5vw;
-        height: auto;
-        padding: 30px 8px;
-    }
-
-    header h1 {
-        font-size: 1.6rem;
-    }
-
-    header p {
-        font-size: 0.9rem;
-    }
-
-    #buttons {
-        gap: 10px;
-        margin-top: 15px;
-    }
-
-    #buttons img {
-        width: 28px;
-        height: 28px;
-    }
-}
-
-        </style>
         
     </head>
 <body>
@@ -166,41 +16,47 @@
 
     <!-- Cabeçalho com imagem de fundo -->
     <header>
-        <video autoplay muted loop id="video-background">
+        <div class="video-container">
+          <video autoplay muted loop>
             <source src="satelite_orbita.mp4" type="video/mp4">
             Seu navegador não suporta vídeo em HTML5.
-        </video>
-        <h1>Portfólio Cartográfico</h1>
-        <p>Bem-vindo ao meu portfólio de geoprocessamento e sensoriamento remoto.</p>
-        <p>Paulo Patrick Rodrigues da Silva</p>
-
-<!-- Botões OpenStreetMap, LinkedIn, GitHub e Freelancer -->
-<div id="buttons">
-    <div class="osm-link">
-        <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank" rel="noopener noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap">
-        </a>
-    </div>
-
-    <div class="linkedin-link">
-        <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank" rel="noopener noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-        </a>
-    </div>
-
-    <div class="github-link">
-        <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank" rel="noopener noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
-        </a>
-    </div>
-
-    <div class="freelancer-link">
-        <a href="https://www.br.freelancer.com/u/eipatrick" target="_blank" rel="noopener noreferrer">
-            <img src="pngwing.com.png" alt="Freelancer.com">
-        </a>
-    </div>
-</div>
-    </header>
+          </video>
+      
+          <div class="video-title">
+            <h1>Portfólio Cartográfico</h1>
+            <p>Bem-vindo ao meu portfólio de geoprocessamento e sensoriamento remoto.</p>
+            <p>Paulo Patrick Rodrigues da Silva</p>
+      
+            <!-- Botões OpenStreetMap, LinkedIn, GitHub e Freelancer -->
+            <div id="buttons">
+              <div class="osm-link">
+                <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank" rel="noopener noreferrer">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap">
+                </a>
+              </div>
+      
+              <div class="linkedin-link">
+                <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank" rel="noopener noreferrer">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+              </div>
+      
+              <div class="github-link">
+                <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank" rel="noopener noreferrer">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+                </a>
+              </div>
+      
+              <div class="freelancer-link">
+                <a href="https://www.br.freelancer.com/u/eipatrick" target="_blank" rel="noopener noreferrer">
+                  <img src="pngwing.com.png" alt="Freelancer.com">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      
 
     <!-- Menu de Navegação -->
     <nav>
@@ -235,13 +91,9 @@
                 <div class="progress-bar"><div class="progress" data-progress="30">30%</div></div>
             </div>
             <div class="skill">
-                <div class="skill-name">Python <span class="total"></span></div>
-                <div class="progress-bar">
-                    <div class="progress manual" style="width: 10%;">10%</div>
-                    <div class="progress ai" style="width: 30%;">+30% com IA</div>
-                </div>
-            </div>
-            
+                <div class="skill-name">Python</div>
+                <div class="progress-bar"><div class="progress" data-progress="20">20%</div></div>
+            </div>            
             <div class="skill">
                 <div class="skill-name">Sensoriamento Remoto</div>
                 <div class="progress-bar"><div class="progress" data-progress="30">30%</div></div>

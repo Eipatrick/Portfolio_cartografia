@@ -8,35 +8,6 @@
     
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <style>
-            /* Estilos para o cabeçalho com imagem de fundo */
-            header {
-                position: relative;
-                text-align: center;
-                color: white; /* Cor do texto para contrastar com o fundo */
-                background-image: url(Terra.jpg); /* Caminho da imagem de fundo */
-                background-size: cover; /* Cobrir todo o espaço do cabeçalho */
-                background-position: center; /* Centralizar a imagem */
-                background-repeat: no-repeat; /* Evitar repetição */
-                background-blend-mode: overlay; /* Mesclar a imagem com a cor de fundo */
-                background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura para melhorar a legibilidade */
-            }
-    
-            header h1, header p {
-                position: relative;
-                z-index: 1; /* Garantir que o texto fique acima da imagem de fundo */
-            }
-    
-            #buttons {
-                position: relative;
-                z-index: 1; /* Garantir que os botões fiquem acima da imagem de fundo */
-                margin-top: 10px;
-            }
-    
-            #buttons img {
-                filter: brightness(1) invert(0); /* Tornar os ícones brancos */
-            }
-        </style>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     </head>
 <body>
@@ -45,42 +16,46 @@
     <!-- Cabeçalho -->
     <!-- Cabeçalho -->
     <header>
-        <h1>Portfólio Cartográfico</h1>
-        <p>Bem-vindo ao meu portfólio de geoprocessamento e sensoriamento remoto.</p>
-        <p>Paulo Patrick Rodrigues da Silva</p>
-
-<!-- Botões OpenStreetMap, LinkedIn, GitHub e Freelancer -->
-<div id="buttons">
-    <div class="osm-link">
-        <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank" rel="noopener noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap">
-        </a>
-    </div>
-
-    <div class="linkedin-link">
-        <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank" rel="noopener noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-        </a>
-    </div>
-
-    <div class="github-link">
-        <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank" rel="noopener noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
-        </a>
-    </div>
-
-    <div class="freelancer-link">
-        <a href="https://www.br.freelancer.com/u/eipatrick" target="_blank" rel="noopener noreferrer">
-            <img src="pngwing.com.png" alt="Freelancer.com">
-        </a>
-    </div>
-</div>
-</div>
+        <div class="video-container">
+          <video autoplay muted loop>
+            <source src="satelite_orbita.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo em HTML5.
+          </video>
+      
+          <div class="video-title">
+            <h1>Portfólio Cartográfico</h1>
+            <p>Bem-vindo ao meu portfólio de geoprocessamento e sensoriamento remoto.</p>
+            <p>Paulo Patrick Rodrigues da Silva</p>
+      
+            <!-- Botões OpenStreetMap, LinkedIn, GitHub e Freelancer -->
+            <div id="buttons">
+              <div class="osm-link">
+                <a href="https://www.openstreetmap.org/user/eipatrick" target="_blank" rel="noopener noreferrer">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg" alt="OpenStreetMap">
+                </a>
+              </div>
+      
+              <div class="linkedin-link">
+                <a href="https://www.linkedin.com/in/paulo-patrick-rodrigues-da-silva-5a3791100/" target="_blank" rel="noopener noreferrer">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+              </div>
+      
+              <div class="github-link">
+                <a href="https://github.com/Eipatrick/Portfolio_cartografia" target="_blank" rel="noopener noreferrer">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+                </a>
+              </div>
+      
+              <div class="freelancer-link">
+                <a href="https://www.br.freelancer.com/u/eipatrick" target="_blank" rel="noopener noreferrer">
+                  <img src="pngwing.com.png" alt="Freelancer.com">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-
-            <!-- Vinculação ao script.js -->
-    <script src="script.js"></script>
-    </header>
+      </header>
 
     <!-- Menu de Navegação -->
     <nav>
