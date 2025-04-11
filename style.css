@@ -112,42 +112,30 @@ footer {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
-/* Botões OpenStreetMap, LinkedIn, GitHub e Freelancer */
-#buttons {
-    margin-top: 10px;
+header h1, header p, #buttons {
+    position: relative;
+    z-index: 1;
+  }
+
+  #buttons {
+    margin-top: 20px;
     display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap; /* Permite que os botões quebrem linha em telas pequenas */
-}
+  }
 
-.osm-link, .linkedin-link, .github-link, .freelancer-link {
-    width: 40px; /* Largura fixa */
-    height: 40px; /* Altura fixa */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-    background-color: #8c6b54; /* Marrom mais claro */
-}
+  #buttons img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(1) invert(0);
+    transition: transform 0.2s;
+  }
 
-.osm-link:hover, .linkedin-link:hover, 
-.github-link:hover, .freelancer-link:hover {
-    background-color: #7a5a46; /* Marrom mais escuro */
-    transform: translateY(-2px); /* Efeito de levantar */
-    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
-}
+  #buttons img:hover {
+    transform: scale(1.1);
+  }
 
-/* Estilo das imagens dentro dos botões */
-.osm-link img, .linkedin-link img, 
-.github-link img, .freelancer-link img {
-    width: 24px; /* Tamanho dos ícones */
-    height: 24px;
-    filter: brightness(0) invert(1); /* Ícones brancos */
-    transition: transform 0.3s ease;
-}
 
 /* Efeito hover nos ícones */
 .osm-link:hover img, .linkedin-link:hover img,
@@ -269,19 +257,15 @@ footer {
 
 /* Estilo para o selo "IA Friendly" */
 #ia-friendly {
-    position: fixed; /* Fixa o selo na tela */
-    top: 20px; /* Distância do topo */
-    right: 20px; /* Distância da direita */
-    opacity: 0.7; /* Transparência */
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-    background-color: #6b4f3a; /* Marrom médio */
-    color: #f5f1e8; /* Bege claro */
-    padding: 10px 15px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    font-size: 14px; /* Tamanho da fonte */
-    font-weight: bold; /* Texto em negrito */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-}
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #fff5;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    z-index: 1000;
+  }
 
 /* Estilos para a seção de habilidades */
 .skill {
