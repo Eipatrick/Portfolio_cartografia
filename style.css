@@ -12,11 +12,11 @@
     text-align: center;
     height: 100%;
   }
-
+  
   body p {
     margin: 10px 0;
   }
-
+  
   /* Cabeçalho padrão reutilizável */
   header {
     position: relative;
@@ -24,10 +24,9 @@
     padding: 0;
     text-align: center;
     overflow: hidden;
-    height: 95.5vh; /* ajuste a altura como quiser */
+    height: 95.5vh;
   }
   
-  /* Faz o vídeo preencher o header com corte suave */
   #video-background {
     position: absolute;
     top: 0;
@@ -48,6 +47,7 @@
     background: rgba(20, 20, 20, 0.226);
     z-index: 0;
   }
+  
   header h1, header p, #buttons {
     position: relative;
     z-index: 1;
@@ -112,9 +112,9 @@
   
   .video-container {
     position: relative;
-    max-width: 90%; /* largura máxima do vídeo */
+    max-width: 90%;
     margin: 0 auto;
-    border: none; /* remove qualquer borda */
+    border: none;
     overflow: hidden;
   }
   
@@ -122,10 +122,9 @@
     width: 100%;
     height: auto;
     display: block;
-    border: none; /* remove borda do vídeo */
+    border: none;
   }
   
-  /* Título centralizado no meio do vídeo */
   .video-title {
     position: absolute;
     top: 50%;
@@ -139,7 +138,6 @@
     text-align: center;
     padding: 10px 20px;
   }
-  
   
   /* Rodapé */
   footer {
@@ -155,7 +153,6 @@
     z-index: 1000;
   }
   
-  /* Créditos e licenças */
   .ai-credit, .license-link {
     font-size: 12px;
     color: #a89f94;
@@ -187,28 +184,70 @@
   
   /* Responsividade */
   @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+  
+    header {
+      height: 85vh;
+    }
+  
+    header h1 {
+      font-size: 1.5rem;
+      padding: 0 10px;
+    }
+  
+    header p {
+      font-size: 1rem;
+      padding: 0 15px;
+    }
+  
+    #buttons {
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  
+    #buttons img {
+      width: 28px;
+      height: 28px;
+    }
+  
+    .container {
+      width: 100%;
+      padding: 15px;
+    }
+  
     .sobre-container {
       flex-direction: column;
+      align-items: center;
       text-align: center;
     }
   
     .sobre-container img {
-      width: 120px;
-      margin-bottom: 15px;
+      width: 100px;
     }
   
-    #buttons {
-      gap: 8px;
+    .sobre-texto {
+      text-align: center;
+      padding: 0 10px;
     }
   
-    .osm-link, .linkedin-link, .github-link, .freelancer-link {
-      width: 36px;
-      height: 36px;
+    .video-title {
+      font-size: 1rem;
+      padding: 8px 12px;
     }
   
-    .osm-link img, .linkedin-link img, .github-link img, .freelancer-link img {
-      width: 20px;
-      height: 20px;
+    .map-container {
+      flex-direction: column;
+    }
+  
+    #map {
+      height: 300px;
+    }
+  
+    .edits-menu {
+      max-height: none;
     }
   }
   
@@ -308,112 +347,5 @@
     line-height: 20px;
     color: white;
     padding-right: 5px;
-  }
-  
-  @media (max-width: 768px) {
-
-    body {
-      font-size: 16px;
-      padding: 0 10px;
-    }
-  
-    header {
-      height: 85vh;
-    }
-  
-    header h1 {
-      font-size: 1.5rem;
-      padding: 0 10px;
-    }
-  
-    header p {
-      font-size: 1rem;
-      padding: 0 15px;
-    }
-  
-    #buttons {
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-  
-    #buttons img {
-      width: 28px;
-      height: 28px;
-    }
-  
-    .container {
-      width: 100%;
-      padding: 15px;
-    }
-  
-    .sobre-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .sobre-container img {
-      width: 100px;
-    }
-  
-    .sobre-texto {
-      text-align: center;
-      padding: 0 10px;
-    }
-  
-    .video-title {
-      font-size: 1rem;
-      padding: 8px 12px;
-    }
-  
-    .map-container {
-      flex-direction: column;
-    }
-  
-    #map {
-      height: 300px;
-    }
-  
-    .edits-menu {
-      max-height: none;
-      padding: 15px;
-    }
-  
-    .video-container {
-      max-width: 100%;
-    }
-  
-    nav {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    nav a {
-      padding: 10px 15px;
-      font-size: 14px;
-    }
-  
-    .skill {
-      text-align: center;
-    }
-  
-    .progress {
-      text-align: center;
-      padding-right: 0;
-      font-size: 0.85rem;
-    }
-  
-    footer {
-      font-size: 12px;
-      padding: 6px 0;
-    }
-  
-    .contact-panel {
-      padding: 15px 10px;
-    }
-  
-    .contact-panel a {
-      word-break: break-word;
-    }
   }
   
